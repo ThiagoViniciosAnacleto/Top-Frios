@@ -3,14 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Top Frios | Queijos e Frios Selecionados em Curitiba</title>
-    <meta name="description" content="Os melhores queijos e frios artesanais direto para sua mesa.">
-
+    <title>Top Frios | Queijos e Iguarias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <script src="script.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">TOP FRIOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://wa.me/seu-numero" target="_blank">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-2 fw-bold">Qualidade que você sente.</h1>
+            <p class="lead">Os melhores queijos, frios e acompanhamentos de Curitiba.</p>
+            <a href="https://wa.me/seu-numero" class="btn btn-warning btn-lg mt-3 fw-bold">
+                <i class="fab fa-whatsapp"></i> FAZER PEDIDO AGORA
+            </a>
+        </div>
+    </header>
+
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossas Seleções</h2>
+                <p>Produtos artesanais e selecionados a dedo</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1486297678162-ad2a19b05840?q=80&w=500" class="card-img-top" alt="Queijos">
+                        <div class="card-body">
+                            <h5 class="card-title">Queijos Nobres</h5>
+                            <p class="card-text">Do Canastra ao Parmesão maturado.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 Top Frios - Queijos e Cia. Curitiba - PR</p>
+            <small>Desenvolvido por Thiago - Software Engineering</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
