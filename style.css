@@ -85,19 +85,42 @@ p {
     box-shadow: 0 4px 15px rgba(242, 161, 0, 0.4);
 }
 
-/* --- HERO SECTION (CAPA) --- */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    /* Mobile: Altura mínima garantida */
-    min-height: 90vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-light);
-    padding: 0 15px;
+/* --- HERO DESKTOP SPLIT --- */
+
+/* Wrapper que simula o tamanho de um celular no Desktop */
+.carousel-phone-wrapper {
+    max-width: 350px; /* Largura média de um smartphone */
+    border: 8px solid var(--secondary-color); /* Borda decorativa estilo moldura */
+    border-radius: 20px;
+    background-color: #000;
+}
+
+/* Ajuste das imagens para preencherem perfeitamente o container */
+.carousel-item img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Ajuste do botão do WhatsApp */
+.btn-success {
+    background-color: #25D366; /* Cor oficial WhatsApp */
+    border: none;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+/* Garante espaçamento confortável no Desktop */
+@media (min-width: 992px) {
+    .hero-desktop {
+        /* Fundo suave para destacar os elementos */
+        background: radial-gradient(circle at top left, #fff8e1, #ffffff);
+    }
 }
 
 /* Ajustes de Texto Base */
