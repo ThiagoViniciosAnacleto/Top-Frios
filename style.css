@@ -16,6 +16,9 @@
     --whatsapp-dark: #128C7E;
     --font-primary: 'Poppins', sans-serif;
     --transition-speed: 0.3s;
+    --red-wine: #800000;   /* Vermelho Escuro/Salame para texto */
+    --red-bright: #D32F2F; /* Vermelho Vivo para botão */
+    --white: #ffffff;
 }
 
 html {
@@ -36,24 +39,67 @@ body {
     color: var(--secondary-color) !important;
 }
 
-/* --- NAVBAR --- */
+/* --- NAVBAR PREMIUM --- */
 .navbar {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.5rem 0; /* Ajuste fino para comportar a logo maior */
+    transition: all 0.3s ease;
 }
 
-.navbar-brand {
-    color: var(--primary-color) !important;
-    font-size: 1.5rem;
+/* Sombra suave na logo para destacar do fundo amarelo */
+.drop-shadow {
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+    transition: transform 0.3s;
 }
 
-.nav-link {
-    color: var(--secondary-color) !important;
-    font-weight: 500;
-    transition: color var(--transition-speed);
+.navbar-brand:hover .drop-shadow {
+    transform: scale(1.05);
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary-color) !important;
+/* Links em Vermelho Vinho (Legibilidade + Elegância) */
+.nav-link-red {
+    color: var(--red-wine) !important;
+    font-size: 1.1rem; /* Um pouco maior para ler melhor */
+    text-transform: uppercase; /* Mais impacto */
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+/* Efeito Hover nos Links */
+.nav-link-red:hover {
+    color: #000 !important; /* Fica preto ao passar o mouse */
+}
+
+.nav-link-red::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--red-wine);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link-red:hover::after {
+    width: 100%;
+}
+
+/* Botão CTA Vermelho (O "Pedir Agora") */
+.btn-cta-red {
+    background-color: var(--red-bright);
+    color: var(--white);
+    border: 2px solid var(--red-bright);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cta-red:hover {
+    background-color: var(--red-wine); /* Escurece ao passar o mouse */
+    border-color: var(--red-wine);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
 }
 
 /* --- HERO SECTION --- */
