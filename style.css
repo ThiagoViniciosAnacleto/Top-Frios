@@ -53,3 +53,21 @@ h1, h2 {
     border: none;
     color: white !important;
 }
+
+/* Personalização dos controles do carrossel com a cor oficial */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--primary-color);
+}
+
+#carouselCardapio img {
+    object-fit: contain;
+    max-height: 80vh; /* Mantém o cardápio visível sem precisar de muito scroll */
+    background-color: #000;
+}
