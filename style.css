@@ -88,7 +88,7 @@ body {
 /* Botão CTA Vermelho (O "Pedir Agora") */
 .btn-cta-red {
     background-color: var(--red-bright);
-    color: var(--white);
+    color: var(--black);
     border: 2px solid var(--black);
     font-size: 1rem;
     transition: all 0.3s ease;
