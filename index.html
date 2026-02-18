@@ -11,56 +11,243 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TOP FRIOS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://wa.me/seu-numero" target="_blank">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: var(--primary-color);">
+    <div class="container">
+        
+        <a class="navbar-brand" href="#inicio">
+            <img src="assets/img/logo.png" alt="Top Frios" height="75" class="d-inline-block align-text-top drop-shadow">
+        </a>
 
-    <header id="inicio" class="hero-section d-flex align-items-center">
-        <div class="container text-center text-white">
-            <h1 class="display-2 fw-bold">Qualidade que você sente.</h1>
-            <p class="lead">Os melhores queijos, frios e acompanhamentos de Curitiba.</p>
-            <a href="https://wa.me/seu-numero" class="btn btn-warning btn-lg mt-3 fw-bold">
-                <i class="fab fa-whatsapp"></i> FAZER PEDIDO AGORA
-            </a>
-        </div>
-    </header>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <section id="produtos" class="py-5">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link px-3 fw-bold nav-link-red" href="#inicio">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 fw-bold nav-link-red" href="#destaques">Favoritos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 fw-bold nav-link-red" href="#vitrine">Cardápio</a>
+                </li>
+                
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a class="btn btn-cta-red rounded-pill px-4 shadow fw-bold" href="https://wa.me/41995219758" target="_blank">
+                        <i class="fa-brands fa-whatsapp me-2"></i> Pedir Agora
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header id="inicio" class="hero-section d-flex align-items-center min-vh-100 py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Nossas Seleções</h2>
-                <p>Produtos artesanais e selecionados a dedo</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card product-card h-100">
-                        <img src="https://images.unsplash.com/photo-1486297678162-ad2a19b05840?q=80&w=500" class="card-img-top" alt="Queijos">
-                        <div class="card-body">
-                            <h5 class="card-title">Queijos Nobres</h5>
-                            <p class="card-text">Do Canastra ao Parmesão maturado.</p>
+            <div class="row align-items-center">
+        
+                <div class="col-lg-6 d-flex flex-column align-items-center justify-content-center mb-5 mb-lg-0 text-center">
+                    <div class="cta-container">
+                        <h1 class="display-5 fw-bold mb-3" style="color: var(--black);">Top Frios</h1>
+                        <p class="lead mb-4">Os melhores queijos e salames de Curitiba.</p>
+                
+                        <a href="https://wa.me/41995219758" target="_blank" class="btn btn-whatsapp btn-lg px-5 py-3 rounded-pill shadow-sm">
+                            <i class="fa-brands fa-whatsapp me-2"></i> Fazer Pedido
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="carousel-phone-wrapper mx-auto">
+                        <div id="carouselCardapio" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img/cardapio/cardapio1.webp" class="d-block w-100" alt="Cardápio 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio2.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio3.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio4.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio5.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio6.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio7.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio8.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio9.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img/cardapio/cardapio10.webp" class="d-block w-100" alt="Cardápio 2">
+                                </div>
+                            </div>
+                            
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCardapio" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselCardapio" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="destaques" class="py-5 bg-white">
+        <div class="container">
+        
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossos Favoritos</h2>
+                <p class="text-muted">Os mais pedidos da semana</p>
+            </div>
+
+            <div class="row g-3 g-lg-4"> <div class="col-6 col-md-4 col-lg-4">
+                <div class="product-card shadow-sm">
+                    <img src="assets/img/fotos-produtos/foto-produto1.webp" alt="Produto Top Frios 1" class="img-fluid" loading="lazy">
+                    <div class="overlay">
+                        <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                    </div>
                 </div>
+                <div class="mt-2 text-center">
+                    <h5 class="fw-bold mb-0">Nome do Produto 1</h5> </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="product-card shadow-sm">
+                        <img src="assets/img/fotos-produtos/foto-produto2.webp" alt="Produto Top Frios 2" class="img-fluid" loading="lazy">
+                        <div class="overlay">
+                            <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h5 class="fw-bold mb-0">Nome do Produto 2</h5>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="product-card shadow-sm">
+                        <img src="assets/img/fotos-produtos/foto-produto3.webp" alt="Produto Top Frios 3" class="img-fluid" loading="lazy">
+                        <div class="overlay">
+                            <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h5 class="fw-bold mb-0">Nome do Produto 3</h5>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="product-card shadow-sm">
+                        <img src="assets/img/fotos-produtos/foto-produto4.webp" alt="Produto Top Frios 4" class="img-fluid" loading="lazy">
+                        <div class="overlay">
+                            <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h5 class="fw-bold mb-0">Nome do Produto 4</h5>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="product-card shadow-sm">
+                        <img src="assets/img/fotos-produtos/foto-produto5.webp" alt="Produto Top Frios 5" class="img-fluid" loading="lazy">
+                        <div class="overlay">
+                            <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h5 class="fw-bold mb-0">Nome do Produto 5</h5>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-4">
+                    <div class="product-card shadow-sm">
+                        <img src="assets/img/fotos-produtos/foto-produto6.webp" alt="Produto Top Frios 6" class="img-fluid" loading="lazy">
+                        <div class="overlay">
+                            <span class="badge bg-light text-dark fs-5">Ver Detalhes</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <h5 class="fw-bold mb-0">Nome do Produto 6</h5>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+<section id="loja" class="py-5 bg-light position-relative overflow-hidden">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold text-uppercase">Onde Estamos</span>
+                    <h2 class="display-6 fw-bold mb-4">Venha nos visitar</h2>
+                    <p class="lead text-muted mb-4">Nosso espaço foi preparado para receber você com o melhor atendimento e variedade.</p>
+
+                    <div class="d-flex mb-3">
+                        <i class="fa-solid fa-location-dot fs-4 text-warning me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">Endereço</h5>
+                            <p class="text-muted mb-0">Rua Almirante Alexandrino, 2084 - Afonso Pena, São José dos Pinhais - PR,</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <i class="fa-regular fa-clock fs-4 text-warning me-3 mt-1"></i>
+                        <div>
+                            <h5 class="fw-bold mb-1">Horários</h5>
+                            <p class="text-muted mb-0">Seg a Sáb: 09h às 19:30h | Dom: 09h às 13h</p>
+                        </div>
+                    </div>
+
+                    <div class="map-container mt-4 shadow-sm rounded-4 overflow-hidden border">
+                        <iframe 
+                            class="w-100"
+                            src="https://maps.google.com/maps?q=Rua%20Almirante%20Alexandrino%2C%202084%20-%20Afonso%20Pena%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Pinhais%20-%20PR&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="bg-white p-2 text-center">
+                            <small class="text-muted"><i class="fa-solid fa-map-pin me-1"></i> Localização exata da loja</small>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="col-lg-6 text-center d-none d-lg-block"> <div class="position-relative d-inline-block">
+                    <div class="decorative-bg"></div>
+                    <img src="assets/img/fachada.webp" alt="Fachada Top Frios" class="img-fluid position-relative rounded-4 shadow-lg border border-4 border-white" style="max-height: 600px; object-fit: cover; z-index: 2;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <footer class="bg-dark text-white py-4 text-center">
         <div class="container">
-            <p class="mb-0">© 2026 Top Frios - Queijos e Cia. Curitiba - PR</p>
+            <p class="mb-0">© 2026 Top Frios - Queijos e Cia. São José dos Pinhais - PR</p>
             <small>Desenvolvido por Thiago - Software Engineering</small>
         </div>
     </footer>
