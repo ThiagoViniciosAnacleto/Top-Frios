@@ -8,15 +8,16 @@
 
 /* --- VARIÁVEIS --- */
 :root {
-    --primary-color: #D32F2F; /* Cor oficial da marca */
-    --secondary-color: #F2A100; /* Cor oficial da marca */;
+    --primary-color: #D32F2F; 
+    --secondary-color: #F2A100; 
     --text-dark: #333333;
     --text-light: #f8f9fa;
     --whatsapp-green: #25D366;
+    --red-bright: #FF1744;
     --whatsapp-dark: #128C7E;
     --font-primary: 'Poppins', sans-serif;
     --transition-speed: 0.3s;
-    --nav-dark: #bd7e00;   /* Amarelo Escuro para botão */
+    --nav-dark: #bd7e00;   
     --white: #ffffff;
     --black: #000000;
 }
@@ -31,43 +32,34 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 70px; /* Compensa a Navbar fixa */
+    padding-top: 70px; 
 }
 
-/* --- UTILITÁRIOS --- */
-.text-secondary-color {
-    color: var(--secondary-color) !important;
-}
+.text-secondary-color { color: var(--secondary-color) !important; }
 
 /* --- NAVBAR PREMIUM --- */
 .navbar {
-    padding: 0.5rem 0; /* Ajuste fino para comportar a logo maior */
+    background-color: var(--primary-color);
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
 }
 
-/* Sombra suave na logo para destacar do fundo amarelo */
 .drop-shadow {
     filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
     transition: transform 0.3s;
 }
 
-.navbar-brand:hover .drop-shadow {
-    transform: scale(1.05);
-}
+.navbar-brand:hover .drop-shadow { transform: scale(1.05); }
 
-/* Links em Vermelho Vinho (Legibilidade + Elegância) */
 .nav-link-red {
     color: var(--black) !important;
-    font-size: 1.1rem; /* Um pouco maior para ler melhor */
-    text-transform: uppercase; /* Mais impacto */
+    font-size: 1.1rem; 
+    text-transform: uppercase; 
     letter-spacing: 0.5px;
     position: relative;
 }
 
-/* Efeito Hover nos Links */
-.nav-link-red:hover {
-    color: var(--black) !important;
-}
+.nav-link-red:hover { color: var(--black) !important; }
 
 .nav-link-red::after {
     content: '';
@@ -81,115 +73,25 @@ body {
     transform: translateX(-50%);
 }
 
-.nav-link-red:hover::after {
-    width: 100%;
-}
+.nav-link-red:hover::after { width: 100%; }
 
-/* Botão CTA Vermelho (O "Pedir Agora") */
+/* --- BOTÕES --- */
 .btn-cta-red {
     background-color: var(--red-bright);
-    color: var(--black);
-    border: 2px solid var(--black);
+    color: var(--white);
+    border: 2px solid var(--red-bright);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 .btn-cta-red:hover {
-    background-color: var(--red-bright); /* Escurece ao passar o mouse */
-    border-color: var(--red-bright);
+    background-color: #d50000; 
+    border-color: #d50000;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 23, 68, 0.3);
+    color: var(--white);
 }
 
-/* --- HERO SECTION --- */
-.hero-section {
-    background: radial-gradient(circle at center, #fffdf5 0%, #fff9e6 50%, #ffffff 100%); 
-    text-align: center;
-    padding: 140px 0 !important; /* Aumenta o 'ar' da seção */
-    position: relative;
-}
-
-.hero-img {
-    max-height: 300px; /* Altura controlada no mobile */
-    width: auto;
-}
-
-.hero-section h1 {
-    font-size: clamp(3rem, 8vw, 4.5rem); /* Fonte fluida conforme a tela */
-    font-weight: 800;
-    color: var(--black) !important;
-    letter-spacing: -2.5px; /* Visual editorial premium */
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-}
-
-.hero-section .lead {
-    color: #666;
-    max-width: 500px;
-    margin: 0 auto 2rem; /* Centraliza o texto de apoio */
-}
-
-.carousel-phone-wrapper {
-    max-width: 300px; /* Tamanho padrão mobile */
-    border: 8px solid var(--secondary-color);
-    border-radius: 20px;
-    background-color: #000;
-    margin: 0 auto;
-}
-
-.carousel-item img {
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    width: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 20; 
-    width: 15%; /* Aumenta a área de clique para facilitar no mobile */
-}
-
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: var(--secondary-color); /* Amarelo da marca para contraste */
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1.2rem;
-    background-size: 50%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-/* Ajuste de posição para não colarem na borda do "aparelho" */
-.carousel-control-prev { left: -20px; }
-.carousel-control-next { right: -20px; }
-
-/* Responsividade: No mobile, as setas voltam para dentro do cardápio */
-@media (max-width: 768px) {
-    .carousel-control-prev { left: 0; }
-    .carousel-control-next { right: 0; }
-    
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        padding: 0.8rem; /* Menores no celular */
-    }
-}
-
-/* Título com toque editorial */
-h1.display-5 {
-    letter-spacing: -1.5px;
-    font-weight: 800 !important;
-    margin-bottom: 1.5rem;
-}
-
-/* Botão WhatsApp */
 .btn-whatsapp {
     background-color: var(--whatsapp-green);
     color: #fff;
@@ -205,7 +107,81 @@ h1.display-5 {
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 
-/* --- VITRINE E PRODUTOS (CARDS) --- */
+/* --- HERO SECTION --- */
+.hero-section {
+    background: radial-gradient(circle at center, #ffffff 0%, #fff9e6 40%, #fdf5e6 100%); 
+    padding: 160px 0 !important;
+}
+
+.hero-section h1 {
+    font-size: clamp(4rem, 12vw, 7rem) !important; 
+    letter-spacing: -4px !important;
+    line-height: 0.85;
+    margin-bottom: 2rem !important;
+}
+
+@media (min-width: 992px) {
+    .hero-section {
+        padding: 180px 0 60px 0 !important; 
+    }
+    
+    /* Mantenha o resto das regras da media query... */
+}
+
+/* --- VITRINE E CARROSSEL (MOCKUP CELULAR) --- */
+.carousel-phone-wrapper {
+    max-width: 300px;
+    border: 10px solid #1a1a1a !important; 
+    border-radius: 35px;
+    background-color: #000;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.carousel-phone-wrapper:hover { transform: scale(1.02); }
+
+.carousel-item img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 20; 
+    width: 15%; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--secondary-color); 
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.carousel-control-prev { left: -20px; }
+.carousel-control-next { right: -20px; }
+
+@media (max-width: 768px) {
+    .carousel-control-prev { left: 0; }
+    .carousel-control-next { right: 0; }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon { padding: 0.8rem; }
+}
+
+/* --- CARDS DE PRODUTOS --- */
 .section-title {
     font-weight: 700;
     position: relative;
@@ -226,31 +202,29 @@ h1.display-5 {
 }
 
 .product-card {
-    border: 1px solid rgba(0,0,0,0.03); /* Borda quase invisível para definição */
+    border: 1px solid rgba(0,0,0,0.03); 
     border-radius: 24px !important;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
     overflow: hidden;
     background-color: #fff;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 
 .product-card img {
     width: 100%;
-    aspect-ratio: 9 / 16; /* Garante o padrão vertical */
+    aspect-ratio: 9 / 16; 
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 .product-card:hover {
     transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(211, 47, 47, 0.1) !important; /* Sombra com tom da marca */
+    box-shadow: 0 20px 50px rgba(211, 47, 47, 0.1) !important; 
 }
 
-.product-card:hover img {
-    transform: scale(1.1);
-}
+.product-card:hover img { transform: scale(1.1); }
 
-/* Overlay (Máscara escura) */
 .product-card .overlay {
     position: absolute;
     top: 0;
@@ -262,48 +236,28 @@ h1.display-5 {
     justify-content: center;
     opacity: 0;
     transition: opacity var(--transition-speed);
+    background: rgba(0,0,0,0.4); /* Fundo sutil para leitura */
 }
 
-.product-card:hover .overlay {
-    opacity: 1;
-}
+.product-card:hover .overlay { opacity: 1; }
 
 .product-card .overlay i, 
 .product-card .overlay .badge {
-    color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
-/* --- SEÇÃO LOJA (NOVA) --- */
-
-/* Ajuste do ícone */
-.icon-square {
-    transition: transform 0.3s ease;
-}
-.d-flex:hover .icon-square {
-    transform: scale(1.1) rotate(5deg);
-    background-color: var(--primary-color) !important;
-    color: #fff !important;
-}
-
-/* Fundo Decorativo atrás da foto da fachada*/
+/* --- SEÇÃO LOJA E MAPA --- */
 .decorative-bg {
     position: absolute;
-    top: -20px;
-    right: -20px;
+    top: -15px;
+    left: -15px; /* Ajuste para equilibrar visual */
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color); /* Amarelo da marca */
+    background-color: var(--primary-color); 
     border-radius: 20px;
-    z-index: 1; /* Fica atrás da foto (que é z-index 2) */
+    z-index: 1; 
     opacity: 0.8;
-}
-
-/* --- Ajustes do Mapa --- */
-.map-container iframe {
-    display: block; /* Remove espaços brancos estranhos */
-    width: 100%;    /* Garante responsividade */
 }
 
 .map-container {
@@ -311,20 +265,18 @@ h1.display-5 {
 }
 
 .map-container:hover {
-    transform: translateY(-3px); /* Leve flutuação ao passar o mouse no mapa */
+    transform: translateY(-3px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
 }
 
-/* Ajuste Responsivo para o quadrado decorativo */
 @media (max-width: 991px) {
     .decorative-bg {
         top: -10px;
-        right: -10px;
+        left: -10px;
     }
 }
 
-
-/* --- TESTIMONIALS --- */
+/* --- TESTIMONIALS E FAQ --- */
 .testimonial-card {
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     height: 100%;
@@ -334,8 +286,6 @@ h1.display-5 {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
 }
-
-/* --- FAQ ACCORDION STYLE --- */
 
 .faq-item {
     border: none !important;
@@ -348,18 +298,9 @@ h1.display-5 {
     transition: color var(--transition-speed);
 }
 
-.faq-item summary:hover {
-    color: var(--primary-color) !important;
-}
-
-/* Esconde a seta padrão do navegador para usarmos a do FontAwesome */
-.faq-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.faq-item[open] summary i {
-    transform: rotate(180deg);
-}
+.faq-item summary:hover { color: var(--primary-color) !important; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item[open] summary i { transform: rotate(180deg); }
 
 .faq-item[open] {
     border-left: 4px solid var(--secondary-color) !important;
@@ -367,14 +308,11 @@ h1.display-5 {
     background-color: #ffffff !important;
 }
 
-/* --- FOOTER REFACTOR --- */
-.footer-links a {
-    transition: color var(--transition-speed), padding-left var(--transition-speed);
-}
-
+/* --- FOOTER --- */
+.footer-links a { transition: color var(--transition-speed), padding-left var(--transition-speed); }
 .footer-links a:hover {
     color: var(--secondary-color) !important;
-    padding-left: 5px; /* Micro-interação de deslocamento */
+    padding-left: 5px; 
 }
 
 footer .social-links a {
@@ -392,30 +330,7 @@ footer .social-links a:hover {
     transform: translateY(-3px);
 }
 
-footer .text-muted {
-    color: white !important;
-}
-
 footer h6 {
     letter-spacing: 2px;
     font-size: 0.8rem;
-}
-
-/* --- MEDIA QUERIES (DESKTOP) --- */
-@media (min-width: 992px) {
-    .hero-section {
-        min-height: 100vh; /* Garante tela cheia no desktop */
-        padding: 0;
-    }
-
-    .hero-img {
-        max-height: 400px; /* Maior no desktop */
-    }
-
-    .carousel-phone-wrapper {
-        max-width: 350px; /* Levemente maior no desktop */
-    }
-
-    /* Tipografia ajustada para telas grandes */
-    h1 { font-size: 3.5rem; }
 }
