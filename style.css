@@ -322,11 +322,11 @@ footer .social-links a {
     padding: 0;
     text-align: center;
     transition: all var(--transition-speed);
+    color: white !important;
 }
 
 footer .social-links a:hover {
-    background-color: var(--secondary-color);
-    color: white;
+    color: white !important;
     transform: translateY(-3px);
 }
 
