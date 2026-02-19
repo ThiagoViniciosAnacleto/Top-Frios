@@ -103,15 +103,90 @@ body {
 
 /* --- HERO SECTION --- */
 .hero-section {
-    /* Fundo padrão para Mobile */
-    background: radial-gradient(circle at top left, #fff8e1, #ffffff);
-    min-height: 100dvh; /* Altura total dinâmica */
-    padding: 2rem 0;
+    background: radial-gradient(circle at center, #fffdf5 0%, #fff9e6 50%, #ffffff 100%); 
+    text-align: center;
+    padding: 140px 0 !important; /* Aumenta o 'ar' da seção */
+    position: relative;
 }
 
 .hero-img {
     max-height: 300px; /* Altura controlada no mobile */
     width: auto;
+}
+
+.hero-section h1 {
+    font-size: clamp(3rem, 8vw, 4.5rem); /* Fonte fluida conforme a tela */
+    font-weight: 800;
+    color: var(--black) !important;
+    letter-spacing: -2.5px; /* Visual editorial premium */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 2rem; /* Centraliza o texto de apoio */
+}
+
+.carousel-phone-wrapper {
+    max-width: 300px; /* Tamanho padrão mobile */
+    border: 8px solid var(--secondary-color);
+    border-radius: 20px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 20; 
+    width: 15%; /* Aumenta a área de clique para facilitar no mobile */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--secondary-color); /* Amarelo da marca para contraste */
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-size: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Ajuste de posição para não colarem na borda do "aparelho" */
+.carousel-control-prev { left: -20px; }
+.carousel-control-next { right: -20px; }
+
+/* Responsividade: No mobile, as setas voltam para dentro do cardápio */
+@media (max-width: 768px) {
+    .carousel-control-prev { left: 0; }
+    .carousel-control-next { right: 0; }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 0.8rem; /* Menores no celular */
+    }
+}
+
+/* Título com toque editorial */
+h1.display-5 {
+    letter-spacing: -1.5px;
+    font-weight: 800 !important;
+    margin-bottom: 1.5rem;
 }
 
 /* Botão WhatsApp */
@@ -130,35 +205,14 @@ body {
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
 }
 
-/* --- CARROSSEL (ESTILO CELULAR) --- */
-.carousel-phone-wrapper {
-    max-width: 300px; /* Tamanho padrão mobile */
-    border: 8px solid var(--secondary-color);
-    border-radius: 20px;
-    background-color: #000;
-    margin: 0 auto;
-}
-
-.carousel-item img {
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    width: 100%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    padding: 1rem;
-    background-size: 50%;
-}
-
 /* --- VITRINE E PRODUTOS (CARDS) --- */
 .section-title {
     font-weight: 700;
     position: relative;
     display: inline-block;
     margin-bottom: 1rem;
+    font-size: 2.2rem;
+    letter-spacing: -1px;
 }
 
 .section-title::after {
@@ -172,12 +226,12 @@ body {
 }
 
 .product-card {
-    position: relative;
-    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.03); /* Borda quase invisível para definição */
+    border-radius: 24px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
     overflow: hidden;
-    cursor: pointer;
     background-color: #fff;
-    transition: all var(--transition-speed);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .product-card img {
@@ -188,8 +242,8 @@ body {
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(211, 47, 47, 0.1) !important; /* Sombra com tom da marca */
 }
 
 .product-card:hover img {
@@ -203,7 +257,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(242, 161, 0, 0.4); /* Primary color com transparência */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,6 +336,13 @@ body {
 }
 
 /* --- FAQ ACCORDION STYLE --- */
+
+.faq-item {
+    border: none !important;
+    border-left: 4px solid transparent !important;
+    transition: all 0.3s ease;
+}
+
 .faq-item summary {
     cursor: pointer;
     transition: color var(--transition-speed);
@@ -302,7 +362,9 @@ body {
 }
 
 .faq-item[open] {
-    border: 1px solid var(--primary-color);
+    border-left: 4px solid var(--secondary-color) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
+    background-color: #ffffff !important;
 }
 
 /* --- FOOTER REFACTOR --- */
@@ -332,6 +394,11 @@ footer .social-links a:hover {
 
 footer .text-muted {
     color: white !important;
+}
+
+footer h6 {
+    letter-spacing: 2px;
+    font-size: 0.8rem;
 }
 
 /* --- MEDIA QUERIES (DESKTOP) --- */
