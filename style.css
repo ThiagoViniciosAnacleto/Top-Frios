@@ -270,6 +270,41 @@ body {
     }
 }
 
+
+/* --- TESTIMONIALS --- */
+.testimonial-card {
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+/* --- FAQ ACCORDION STYLE --- */
+.faq-item summary {
+    cursor: pointer;
+    transition: color var(--transition-speed);
+}
+
+.faq-item summary:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Esconde a seta padrão do navegador para usarmos a do FontAwesome */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+.faq-item[open] {
+    border: 1px solid var(--primary-color);
+}
+
 /* --- FOOTER --- */
 footer {
     background-color: var(--secondary-color);
