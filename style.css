@@ -305,15 +305,33 @@ body {
     border: 1px solid var(--primary-color);
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
+/* --- FOOTER REFACTOR --- */
+.footer-links a {
+    transition: color var(--transition-speed), padding-left var(--transition-speed);
 }
 
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
+.footer-links a:hover {
+    color: var(--secondary-color) !important;
+    padding-left: 5px; /* Micro-interação de deslocamento */
+}
+
+footer .social-links a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0;
+    text-align: center;
+    transition: all var(--transition-speed);
+}
+
+footer .social-links a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+footer .text-muted {
+    color: white !important;
 }
 
 /* --- MEDIA QUERIES (DESKTOP) --- */
