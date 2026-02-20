@@ -1,208 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Frios | Queijos e Iguarias</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Top Frios | Queijos e Iguarias</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-<header>
-    <nav class="navbar navbar-expand-lg py-3 shadow-sm navbar-clean">
-        <div class="container">
-            <a class="navbar-brand" href="#inicio" aria-label="Página Inicial Top Frios">
-                <img src="assets/img/logo.png" alt="Top Frios" class="nav-logo drop-shadow">
-            </a>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg py-3 shadow-sm navbar-clean">
+                <div class="container">
+                    <a class="navbar-brand" href="#inicio" aria-label="Página Inicial Top Frios">
+                        <img src="assets/img/logo.png" alt="Top Frios" class="nav-logo drop-shadow">
+                    </a>
 
-            <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
-                <i class="fa-solid fa-bars fs-1"></i>
-            </button>
+                    <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
+                        <i class="fa-solid fa-bars fs-1"></i>
+                    </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto align-items-center gap-lg-4 mt-4 mt-lg-0">
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="#vitrine">Nossas Tábuas</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold" href="#loja">A Loja</a></li>
-                    <li class="nav-item mt-3 mt-lg-0">
-                        <a href="https://wa.me/41995219758" class="btn btn-cta rounded-pill px-4 py-2 shadow fw-bold d-flex align-items-center gap-2" target="_blank">
-                            <i class="fa-brands fa-whatsapp fs-5"></i> Pedir Agora
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main>
-
-    <section id="inicio" class="hero-section">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Momentos inesquecíveis pedem <span class="text-highlight">sabores excepcionais.</span></h1>
-                <p class="hero-subtitle">Tábuas de frios artesanais e produtos premium selecionados para você. Descubra o verdadeiro sabor da alta gastronomia em casa.</p>
-                <a href="#vitrine" class="btn btn-cta btn-large rounded-pill shadow-lg">Ver o Cardápio</a>
-            </div>
-            <div class="hero-image-wrapper d-none d-lg-block">
-                <img src="assets/img/fotos-produtos/foto-produto1.webp" alt="Tábua de Frios Premium" class="hero-img drop-shadow">
-            </div>
-        </div>
-    </section>
-
-    <section id="vitrine" class="produtos-section bg-light-custom">
-        <div class="container">
-            <header class="section-header text-center">
-                <h2>Nossas Especialidades</h2>
-                <p>Artesanais, frescos e montados com excelência.</p>
-            </header>
-
-<div class="produtos-masonry">
-    
-    <article class="produto-card">
-        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/tabua-metro.jpeg" data-titulo="Tábua Metro">
-            <img src="assets/img/fotos-produtos/tabua-metro.jpeg" alt="Tábua Metro" class="produto-img">
-            <div class="zoom-overlay">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-        </div>
-        <div class="produto-info">
-            <h3 class="produto-nome">Tábua Metro</h3>
-            <p class="produto-desc">Uma verdadeira obra de arte para grandes eventos. Um metro inteiro de queijos selecionados, frios artesanais, frutas frescas e oleaginosas.</p>
-            <div class="produto-footer">
-                <span class="produto-preco">R$ 199,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Gostaria%20de%20saber%20o%20valor%20da%20Tábua%20Metro." class="btn-whatsapp-small" aria-label="Pedir Tábua Metro">
-                    <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-            </div>
-        </div>
-    </article>
-
-<article class="produto-card">
-        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/frança.jpeg" data-titulo="Tábua França">
-            
-            <img src="assets/img/fotos-produtos/frança.jpeg" alt="França" class="produto-img">
-            
-            <div class="zoom-overlay">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-        </div>
-        
-        <div class="produto-info">
-            <h3 class="produto-nome">França</h3>
-            <p class="produto-desc">Elegância e sabor com salame lombo canadense, queijo gorgonzola, emmental, brie, uvas e damascos. Ideal para 3 pessoas.</p>
-            <div class="produto-footer">
-                <span class="produto-preco">R$ 99,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20França." class="btn-whatsapp-small" aria-label="Pedir Tábua França">
-                    <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-            </div>
-        </div>
-    </article>
-
-    <article class="produto-card">
-        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/veneza.jpeg" data-titulo="Tábua Veneza">
-            
-            <img src="assets/img/fotos-produtos/veneza.jpeg" alt="Tábua Veneza" class="produto-img">
-            
-            <div class="zoom-overlay">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-            
-        </div>
-        
-        <div class="produto-info">
-            <h3 class="produto-nome">Veneza</h3>
-            <p class="produto-desc">Nossa tábua romântica em formato de coração. Combinação perfeita de queijos finos, presunto e frutas para um momento a dois.</p>
-            <div class="produto-footer">
-                <span class="produto-preco">R$ 99,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Veneza." class="btn-whatsapp-small" aria-label="Pedir Tábua Veneza">
-                    <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-            </div>
-        </div>
-    </article>
-
-    <article class="produto-card">
-        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/friburgo.jpeg" data-titulo="Tábua Friburgo">
-            
-            <img src="assets/img/fotos-produtos/friburgo.jpeg" alt="Tábua Friburgo" class="produto-img">
-            
-            <div class="zoom-overlay">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-        </div>
-        
-        <div class="produto-info">
-            <h3 class="produto-nome">Friburgo</h3>
-            <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
-            <div class="produto-footer">
-                <span class="produto-preco">R$ 89,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Friburgo." class="btn-whatsapp-small" aria-label="Pedir Tábua Friburgo">
-                    <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-            </div>
-        </div>
-    </article>
-
-    <article class="produto-card">
-        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/amsterda.jpeg" data-titulo="Box Amsterdã">
-            
-            <img src="assets/img/fotos-produtos/amsterda.jpeg" alt="Box Amsterdã" class="produto-img">
-            
-            <div class="zoom-overlay">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-        </div>
-        
-        <div class="produto-info">
-            <h3 class="produto-nome">Amsterdã</h3>
-            <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
-            <div class="produto-footer">
-                <span class="produto-preco">R$ 250,00</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20o%20Box%20Amsterdã." class="btn-whatsapp-small" aria-label="Pedir Box Amsterdã">
-                    <i class="fa-brands fa-whatsapp"></i> Pedir
-                </a>
-            </div>
-        </div>
-    </article>
-
-    </div>
-
-    <div class="modal fade" id="modalZoom" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-transparent border-0">
-                <div class="modal-header border-0 pb-0">
-                    <button type="button" class="btn-close btn-close-white ms-auto shadow-none" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    <div class="collapse navbar-collapse" id="menuPrincipal">
+                        <ul class="navbar-nav ms-auto align-items-center gap-lg-4 mt-4 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="#inicio">Início</a></li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="#vitrine">Nossas Tábuas</a></li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="#loja">A Loja</a></li>
+                            <li class="nav-item mt-3 mt-lg-0">
+                                <a href="https://wa.me/41995219758" class="btn btn-cta rounded-pill px-4 py-2 shadow fw-bold d-flex align-items-center gap-2" target="_blank">
+                                    <i class="fa-brands fa-whatsapp fs-5"></i> Pedir Agora
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="modal-body text-center p-0 mt-2">
-                    <img src="" id="imagemModalSrc" class="img-fluid rounded shadow-lg" alt="Zoom do Produto" style="max-height: 85vh; object-fit: contain;">
-                    <h4 id="tituloModal" class="text-white mt-3 fw-bold drop-shadow"></h4>
+            </nav>
+        </header>
+
+        <main>
+            <section id="inicio" class="hero-section">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Momentos inesquecíveis pedem <span class="text-highlight">sabores excepcionais.</span></h1>
+                        <p class="hero-subtitle">Tábuas de frios artesanais e produtos premium selecionados para você. Descubra o verdadeiro sabor da alta gastronomia em casa.</p>
+                    </div>
+                    <div class="hero-image-wrapper d-none d-lg-block">
+                        <img src="assets/img/fotos-produtos/foto-produto1.webp" alt="Tábua de Frios Premium" class="hero-img drop-shadow">
+                    </div>
+                </div>
+            </section>
+
+            <section id="vitrine" class="produtos-section bg-light-custom">
+                <div class="container">
+                    <header class="section-header text-center">
+                        <h2>Nossas Especialidades</h2>
+                        <p>Produtos artesanais, frescos e montados com excelência.</p>
+                    </header>
+
+                <div class="produtos-masonry">
+            
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/tabua-metro.jpeg" data-titulo="Tábua Metro">
+                            <img src="assets/img/fotos-produtos/tabua-metro.jpeg" alt="Tábua Metro" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Tábua Metro</h3>
+                            <p class="produto-desc">Uma verdadeira obra de arte para grandes eventos. Um metro inteiro de queijos selecionados, frios artesanais, frutas frescas e oleaginosas.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 199,90</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Gostaria%20de%20saber%20o%20valor%20da%20Tábua%20Metro." class="btn-whatsapp-small" aria-label="Pedir Tábua Metro">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/frança.jpeg" data-titulo="Tábua França">
+                            
+                            <img src="assets/img/fotos-produtos/frança.jpeg" alt="França" class="produto-img">
+                            
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="produto-info">
+                            <h3 class="produto-nome">França</h3>
+                            <p class="produto-desc">Elegância e sabor com salame lombo canadense, queijo gorgonzola, emmental, brie, uvas e damascos. Ideal para 3 pessoas.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 99,90</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20França." class="btn-whatsapp-small" aria-label="Pedir Tábua França">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/veneza.jpeg" data-titulo="Tábua Veneza">
+                            
+                            <img src="assets/img/fotos-produtos/veneza.jpeg" alt="Tábua Veneza" class="produto-img">
+                            
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Veneza</h3>
+                            <p class="produto-desc">Nossa tábua romântica em formato de coração. Combinação perfeita de queijos finos, presunto e frutas para um momento a dois.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 99,90</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Veneza." class="btn-whatsapp-small" aria-label="Pedir Tábua Veneza">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/friburgo.jpeg" data-titulo="Tábua Friburgo">
+                            
+                            <img src="assets/img/fotos-produtos/friburgo.jpeg" alt="Tábua Friburgo" class="produto-img">
+                            
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Friburgo</h3>
+                            <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 89,90</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Friburgo." class="btn-whatsapp-small" aria-label="Pedir Tábua Friburgo">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/amsterda.jpeg" data-titulo="Box Amsterdã">
+                            
+                            <img src="assets/img/fotos-produtos/amsterda.jpeg" alt="Box Amsterdã" class="produto-img">
+                            
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Amsterdã</h3>
+                            <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 250,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20o%20Box%20Amsterdã." class="btn-whatsapp-small" aria-label="Pedir Box Amsterdã">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/paris.jpeg" data-titulo="Tábua Paris">
+                            <img src="assets/img/fotos-produtos/paris.jpeg" alt="Tábua Paris" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Paris</h3>
+                            <p class="produto-desc">Uma seleção clássica com queijos variados, salames artesanais, frutas frescas e torradas crocantes temperadas.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 120,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Paris." class="btn-whatsapp-small" aria-label="Pedir Tábua Paris">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/zurique.jpeg" data-titulo="Box Zurique">
+                            <img src="assets/img/fotos-produtos/zurique.jpeg" alt="Box Zurique" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Zurique</h3>
+                            <p class="produto-desc">Ideal para presentear. Um box intimista com queijo brie, geleia artesanal, castanhas e charcutaria selecionada.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 75,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20o%20Box%20Zurique." class="btn-whatsapp-small" aria-label="Pedir Box Zurique">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/florença.jpeg" data-titulo="Tábua Florença">
+                            <img src="assets/img/fotos-produtos/florença.jpeg" alt="Tábua Florença" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Florença</h3>
+                            <p class="produto-desc">Elegância e sabor com salame lombo canadense, queijos variados, uvas e damascos. Ideal para compartilhar com amigos.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 105,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Florença." class="btn-whatsapp-small" aria-label="Pedir Tábua Florença">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/roma.jpeg" data-titulo="Box Roma">
+                            <img src="assets/img/fotos-produtos/roma.jpeg" alt="Box Roma" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Roma</h3>
+                            <p class="produto-desc">Uma viagem à Itália em formato de box. Frios nobres, queijos especiais como brie, castanhas e frutas selecionadas.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 140,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20o%20Box%20Roma." class="btn-whatsapp-small" aria-label="Pedir Box Roma">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/lille.jpeg" data-titulo="Tábua Lille">
+                            <img src="assets/img/fotos-produtos/lille.jpeg" alt="Tábua Lille" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Lille</h3>
+                            <p class="produto-desc">Perfeita para pequenas reuniões. Composição equilibrada de queijos em fatias, embutidos floridos e uvas frescas.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 85,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Lille." class="btn-whatsapp-small" aria-label="Pedir Tábua Lille">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="produto-card">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/marselha.jpeg" data-titulo="Tábua Marselha">
+                            <img src="assets/img/fotos-produtos/marselha.jpeg" alt="Tábua Marselha" class="produto-img">
+                            <div class="zoom-overlay">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                        <div class="produto-info">
+                            <h3 class="produto-nome">Marselha</h3>
+                            <p class="produto-desc">Nossa tábua clássica e sofisticada, com uma montagem impecável de frios, queijos nobres e frutas da estação.</p>
+                            <div class="produto-footer">
+                                <span class="produto-preco">R$ 95,00</span>
+                                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Marselha." class="btn-whatsapp-small" aria-label="Pedir Tábua Marselha">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="modal fade" id="modalZoom" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bg-transparent border-0">
+                            <div class="modal-header border-0 pb-0">
+                                <button type="button" class="btn-close btn-close-white ms-auto shadow-none" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            </div>
+                            <div class="modal-body text-center p-0 mt-2">
+                                <img src="" id="imagemModalSrc" class="img-fluid rounded shadow-lg" alt="Zoom do Produto" style="max-height: 85vh; object-fit: contain;">
+                                <h4 id="tituloModal" class="text-white mt-3 fw-bold drop-shadow"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-custom">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <img src="assets/img/logo.png" alt="Top Frios" class="footer-logo">
+                    <p>Distribuidora de Alimentos Premium.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Top Frios. Todos os direitos reservados.</p>
+            </div>
+        </footer>
 
-<footer class="footer-custom">
-    <div class="container footer-content">
-        <div class="footer-brand">
-            <img src="assets/img/logo.png" alt="Top Frios" class="footer-logo">
-            <p>Distribuidora de Alimentos Premium.</p>
-        </div>
-        <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-    </div>
-    <div class="footer-bottom text-center">
-        <p>&copy; 2026 Top Frios. Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
