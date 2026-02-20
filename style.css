@@ -161,44 +161,57 @@ section { padding: 4rem 0; }
     font-size: 1.1rem;
     padding: 1rem 2.5rem;
 }
-
 /* =========================================
-   2. VITRINE (GRID MÁGICO)
+   2. VITRINE (MASONRY / PINTEREST STYLE)
    ========================================= */
-.produtos-grid {
-    display: grid;
-    /* Aqui está o segredo: Cria colunas que se auto-ajustam 
-       sem precisar de media queries. Mínimo de 18rem de largura. */
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: 2rem;
+.produtos-masonry {
+    column-count: 1; /* No celular, fica 1 por linha */
+    column-gap: 2rem;
+}
+
+/* No tablet, divide em 2 colunas */
+@media (min-width: 768px) {
+    .produtos-masonry { column-count: 2; }
+}
+
+/* No PC, divide em 3 colunas */
+@media (min-width: 992px) {
+    .produtos-masonry { column-count: 3; }
 }
 
 .produto-card {
+    break-inside: avoid; /* O Segredo: Impede que o cartão seja "rasgado" entre uma coluna e outra */
+    margin-bottom: 2rem; /* Espaço vertical entre os cartões */
     background: var(--color-white);
     border-radius: 1.2rem;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     transition: var(--transition-default);
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
 }
 
-.produto-card:hover { transform: translateY(-0.5rem); }
+.produto-card:hover { 
+    transform: translateY(-0.5rem); 
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.1);
+}
 
+/* A Imagem agora é 100% natural, sem cortes! */
 .produto-img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    height: auto; 
+    display: block;
+    border-bottom: 2px solid var(--color-light);
 }
 
 .produto-info {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Empurra o footer do card para baixo */
 }
 
-.produto-nome { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-.produto-desc { font-size: 0.9rem; color: #666; flex-grow: 1; margin-bottom: 1.5rem; }
+.produto-nome { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark); }
+.produto-desc { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
 
 .produto-footer {
     display: flex;
@@ -206,6 +219,7 @@ section { padding: 4rem 0; }
     align-items: center;
     border-top: 1px solid #eee;
     padding-top: 1rem;
+    margin-top: auto; /* Garante que o rodapé fique no fundo do cartão */
 }
 
 .produto-preco {
@@ -220,6 +234,7 @@ section { padding: 4rem 0; }
     padding: 0.5rem 1.2rem;
     font-weight: 600;
     text-decoration: none;
+    border-radius: 50px;
     transition: var(--transition-default);
 }
 .btn-whatsapp-small:hover { background-color: #128C7E; color: var(--color-white); }
