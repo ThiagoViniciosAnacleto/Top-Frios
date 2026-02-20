@@ -63,7 +63,12 @@
 <div class="produtos-masonry">
     
     <article class="produto-card">
-        <img src="assets/img/fotos-produtos/tabua-metro.jpeg" alt="Tábua Metro" class="produto-img">
+        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/tabua-metro.jpeg" data-titulo="Tábua Metro">
+            <img src="assets/img/fotos-produtos/tabua-metro.jpeg" alt="Tábua Metro" class="produto-img">
+            <div class="zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+        </div>
         <div class="produto-info">
             <h3 class="produto-nome">Tábua Metro</h3>
             <p class="produto-desc">Uma verdadeira obra de arte para grandes eventos. Um metro inteiro de queijos selecionados, frios artesanais, frutas frescas e oleaginosas.</p>
@@ -76,14 +81,22 @@
         </div>
     </article>
 
-    <article class="produto-card">
-        <img src="assets/img/fotos-produtos/frança.jpeg" alt="França" class="produto-img">
+<article class="produto-card">
+        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/frança.jpeg" data-titulo="Tábua França">
+            
+            <img src="assets/img/fotos-produtos/frança.jpeg" alt="França" class="produto-img">
+            
+            <div class="zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+        </div>
+        
         <div class="produto-info">
             <h3 class="produto-nome">França</h3>
             <p class="produto-desc">Elegância e sabor com salame lombo canadense, queijo gorgonzola, emmental, brie, uvas e damascos. Ideal para 3 pessoas.</p>
             <div class="produto-footer">
                 <span class="produto-preco">R$ 99,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Florença." class="btn-whatsapp-small" aria-label="Pedir Tábua Florença">
+                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20França." class="btn-whatsapp-small" aria-label="Pedir Tábua França">
                     <i class="fa-brands fa-whatsapp"></i> Pedir
                 </a>
             </div>
@@ -91,7 +104,16 @@
     </article>
 
     <article class="produto-card">
-        <img src="assets/img/fotos-produtos/veneza.jpeg" alt="Tábua Veneza" class="produto-img">
+        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/veneza.jpeg" data-titulo="Tábua Veneza">
+            
+            <img src="assets/img/fotos-produtos/veneza.jpeg" alt="Tábua Veneza" class="produto-img">
+            
+            <div class="zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+            
+        </div>
+        
         <div class="produto-info">
             <h3 class="produto-nome">Veneza</h3>
             <p class="produto-desc">Nossa tábua romântica em formato de coração. Combinação perfeita de queijos finos, presunto e frutas para um momento a dois.</p>
@@ -105,13 +127,21 @@
     </article>
 
     <article class="produto-card">
-        <img src="assets/img/fotos-produtos/friburgo.jpeg" alt="Friburgo" class="produto-img">
+        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/friburgo.jpeg" data-titulo="Tábua Friburgo">
+            
+            <img src="assets/img/fotos-produtos/friburgo.jpeg" alt="Tábua Friburgo" class="produto-img">
+            
+            <div class="zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+        </div>
+        
         <div class="produto-info">
             <h3 class="produto-nome">Friburgo</h3>
             <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
             <div class="produto-footer">
                 <span class="produto-preco">R$ 89,90</span>
-                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20o%20Box%20Amsterdã." class="btn-whatsapp-small" aria-label="Pedir Box Amsterdã">
+                <a href="https://wa.me/41995219758?text=Olá!%20Quero%20pedir%20a%20Tábua%20Friburgo." class="btn-whatsapp-small" aria-label="Pedir Tábua Friburgo">
                     <i class="fa-brands fa-whatsapp"></i> Pedir
                 </a>
             </div>
@@ -119,9 +149,17 @@
     </article>
 
     <article class="produto-card">
-        <img src="assets/img/fotos-produtos/amsterda.jpeg" alt="Amsterda" class="produto-img">
+        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/amsterda.jpeg" data-titulo="Box Amsterdã">
+            
+            <img src="assets/img/fotos-produtos/amsterda.jpeg" alt="Box Amsterdã" class="produto-img">
+            
+            <div class="zoom-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+        </div>
+        
         <div class="produto-info">
-            <h3 class="produto-nome">Amsterda</h3>
+            <h3 class="produto-nome">Amsterdã</h3>
             <p class="produto-desc">Descrição do produto tal, tal, tal, tal, tal, tal</p>
             <div class="produto-footer">
                 <span class="produto-preco">R$ 250,00</span>
@@ -132,6 +170,20 @@
         </div>
     </article>
 
+    </div>
+
+    <div class="modal fade" id="modalZoom" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto shadow-none" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body text-center p-0 mt-2">
+                    <img src="" id="imagemModalSrc" class="img-fluid rounded shadow-lg" alt="Zoom do Produto" style="max-height: 85vh; object-fit: contain;">
+                    <h4 id="tituloModal" class="text-white mt-3 fw-bold drop-shadow"></h4>
+                </div>
+            </div>
+        </div>
     </div>
 
 <footer class="footer-custom">
@@ -151,5 +203,6 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
