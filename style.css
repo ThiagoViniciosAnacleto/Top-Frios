@@ -1,383 +1,109 @@
-/**
- * Project: Top Frios - Queijos e Cia
- * Author: Thiago Anacleto
- * Year: 2026
- * License: MIT
- * Description: Custom styles for Top Frios Landing Page.
- */
-
-/* --- VARIÁVEIS --- */
+/* =========================================
+   1. VARIÁVEIS E BASE (MOBILE-FIRST)
+   ========================================= */
 :root {
-    --primary-color: #D32F2F; 
-    --secondary-color: #F2A100; 
-    --text-dark: #333333;
-    --text-light: #f8f9fa;
-    --whatsapp-green: #25D366;
-    --red-bright: #FF1744;
-    --whatsapp-dark: #128C7E;
-    --font-primary: 'Poppins', sans-serif;
-    --transition-speed: 0.3s;
-    --nav-dark: #bd7e00;   
-    --white: #ffffff;
-    --black: #000000;
+    /* Paleta Premium - Queijos e Vinhos */
+    --color-primary: #7A1A2A;   /* Bordô/Vinho - Elegante e profundo */
+    --color-secondary: #D4AF37; /* Dourado Envelhecido - Sofisticação */
+    --color-dark: #2C3034;      /* Chumbo Escuro - Menos agressivo que o preto puro */
+    --color-light: #F9F7F3;     /* Creme/Off-white - Traz o aspecto artesanal/rústico */
+    --color-white: #ffffff;
+    --color-whatsapp: #25D366;
+    
+    --font-main: 'Poppins', sans-serif;
+    --transition-default: all 0.3s ease;
 }
-
 html {
+    scroll-behavior: smooth; /* Seguro agora que não temos barras fixas brigando com a tela */
     font-size: 16px;
 }
 
 body {
-    font-family: var(--font-primary);
-    color: var(--text-dark);
+    font-family: var(--font-main);
+    color: var(--color-dark);
+    background-color: var(--color-light);
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
-
-.text-secondary-color { color: var(--secondary-color) !important; }
-
-.navbar {
-    background-color: var(--primary-color) !important;
-    padding: 12px 0 !important; 
-
-    align-items: flex-start !important;
-}
-
-/* --- CLASSE INJETADA PELO JAVASCRIPT --- */
-.navbar-fixed-custom {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1050;
-    animation: slideDown 0.3s ease-in-out;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
-.navbar > .container {
-    display: flex;
-    align-items: center; /* Mantém logo e botão alinhados entre si */
-    flex-wrap: wrap; /* Permite que o menu abra corretamente para baixo */
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.navbar-logo {
-    height: 45px !important; /* Tamanho exato e blindado para celular */
-    width: auto !important;
-    display: block;
-    object-fit: contain; 
-}
-.navbar-brand:hover .drop-shadow { transform: scale(1.05); }
 
 .drop-shadow {
-    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
-    transition: transform 0.3s; 
-}
-
-.nav-link-red {
-    color: var(--black) !important;
-    font-size: 1.1rem; 
-    text-transform: uppercase; 
-    letter-spacing: 0.5px;
-    position: relative;
-}
-
-.nav-link-red:hover { color: var(--black) !important; }
-
-.nav-link-red::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 50%;
-    background-color: var(--black);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link-red:hover::after { width: 100%; }
-
-@media (min-width: 992px) {
-    /* DEVOLVEMOS O SCROLL SUAVE SÓ PARA O PC (ONDE É SEGURO) */
-    html {
-        scroll-behavior: smooth; 
-    }
-
-    .navbar-logo {
-        height: 65px !important; 
-    }
-
-    .hero-section {
-        padding: 80px 0 60px 0 !important; 
-    }
+    filter: drop-shadow(0 0.2rem 0.2rem rgba(0,0,0,0.15));
 }
 
 /* =========================================
-   3. BOTÕES
+   2. NAVBAR PERFEITA E FLUIDA
    ========================================= */
-.btn-cta-red {
-    background-color: var(--red-bright);
-    color: var(--white);
-    border: 2px solid var(--red-bright);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-.btn-cta-red:hover {
-    background-color: #d50000; 
-    border-color: #d50000;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 23, 68, 0.3);
-    color: var(--white);
+.bg-primary-custom {
+    background-color: var(--color-light);
 }
 
-.btn-whatsapp {
-    background-color: var(--whatsapp-green);
-    color: #fff;
-    border: none;
-    font-weight: 700;
-    transition: all var(--transition-speed);
+/* Logo: Tamanho seguro e relativo para o celular */
+.nav-logo {
+    width: auto;
+    height: 2.5rem; 
+    object-fit: contain;
+    transition: var(--transition-default);
 }
 
-.btn-whatsapp:hover {
-    background-color: var(--whatsapp-dark);
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+.navbar-brand:hover .nav-logo {
+    transform: scale(1.05);
 }
 
-/* --- HERO SECTION --- */
-.hero-section {
-    background: radial-gradient(circle at center, #ffffff 0%, #fff9e6 40%, #fdf5e6 100%); 
-    padding: 160px 0 !important;
+/* Links do Menu no Celular */
+.navbar-nav .nav-link {
+    color: var(--color-dark);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition-default);
 }
 
-.hero-section h1 {
-    font-size: clamp(4rem, 12vw, 7rem) !important; 
-    letter-spacing: -4px !important;
-    line-height: 0.85;
-    margin-bottom: 2rem !important;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--color-primary) !important;
 }
 
+/* Botão CTA Principal */
+.btn-cta {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border: 0.15rem solid var(--color-dark);
+    transition: var(--transition-default);
+}
+
+.btn-cta:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-dark);
+    transform: translateY(-0.2rem);
+}
+
+/* =========================================
+   3. MEDIA QUERIES (DESKTOP)
+   ========================================= */
 @media (min-width: 992px) {
-    .hero-section {
-        padding: 180px 0 60px 0 !important; 
+    /* Logo cresce de forma fluida para telas grandes */
+    .nav-logo {
+        height: 3.5rem; 
     }
     
-    /* Mantenha o resto das regras da media query... */
-}
-
-/* --- VITRINE E CARROSSEL (MOCKUP CELULAR) --- */
-.carousel-phone-wrapper {
-    max-width: 300px;
-    border: 10px solid #1a1a1a !important; 
-    border-radius: 35px;
-    background-color: #000;
-    margin: 0 auto;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-    transition: transform 0.5s ease;
-    overflow: hidden;
-}
-
-.carousel-phone-wrapper:hover { transform: scale(1.02); }
-
-.carousel-item img {
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
-    width: 100%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 20; 
-    width: 15%; 
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: var(--secondary-color); 
-    border: 2px solid white;
-    border-radius: 50%;
-    padding: 1.2rem;
-    background-size: 50%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    background-color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-.carousel-control-prev { left: -20px; }
-.carousel-control-next { right: -20px; }
-
-@media (max-width: 768px) {
-    .carousel-control-prev { left: 0; }
-    .carousel-control-next { right: 0; }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon { padding: 0.8rem; }
-}
-
-/* --- CARDS DE PRODUTOS --- */
-.section-title {
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-size: 2.2rem;
-    letter-spacing: -1px;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--primary-color);
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-.product-card {
-    border: 1px solid rgba(0,0,0,0.03); 
-    border-radius: 24px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04) !important;
-    overflow: hidden;
-    background-color: #fff;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-}
-
-.product-card img {
-    width: 100%;
-    aspect-ratio: 9 / 16; 
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(211, 47, 47, 0.1) !important; 
-}
-
-.product-card:hover img { transform: scale(1.1); }
-
-.product-card .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity var(--transition-speed);
-    background: rgba(0,0,0,0.4); /* Fundo sutil para leitura */
-}
-
-.product-card:hover .overlay { opacity: 1; }
-
-.product-card .overlay i, 
-.product-card .overlay .badge {
-    font-size: 1rem;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-
-/* --- SEÇÃO LOJA E MAPA --- */
-.decorative-bg {
-    position: absolute;
-    top: -15px;
-    left: -15px; /* Ajuste para equilibrar visual */
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color); 
-    border-radius: 20px;
-    z-index: 1; 
-    opacity: 0.8;
-}
-
-.map-container {
-    transition: transform 0.3s ease;
-}
-
-.map-container:hover {
-    transform: translateY(-3px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-}
-
-@media (max-width: 991px) {
-    .decorative-bg {
-        top: -10px;
-        left: -10px;
+    /* Efeito de sublinhado nos links ativo apenas no PC */
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0.2rem;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--color-secondary);
+        transition: var(--transition-default);
+        transform: translateX(-50%);
     }
-}
 
-/* --- TESTIMONIALS E FAQ --- */
-.testimonial-card {
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    height: 100%;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-}
-
-.faq-item {
-    border: none !important;
-    border-left: 4px solid transparent !important;
-    transition: all 0.3s ease;
-}
-
-.faq-item summary {
-    cursor: pointer;
-    transition: color var(--transition-speed);
-}
-
-.faq-item summary:hover { color: var(--primary-color) !important; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item[open] summary i { transform: rotate(180deg); }
-
-.faq-item[open] {
-    border-left: 4px solid var(--secondary-color) !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
-    background-color: #ffffff !important;
-}
-
-/* --- FOOTER --- */
-.footer-links a { transition: color var(--transition-speed), padding-left var(--transition-speed); }
-.footer-links a:hover {
-    color: var(--secondary-color) !important;
-    padding-left: 5px; 
-}
-
-footer .social-links a {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    padding: 0;
-    text-align: center;
-    transition: all var(--transition-speed);
-    color: white !important;
-}
-
-footer .social-links a:hover {
-    color: white !important;
-    transform: translateY(-3px);
-}
-
-footer h6 {
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+    .navbar-nav .nav-link:hover::after {
+        width: 100%;
+    }
 }
