@@ -38,7 +38,10 @@ body {
     background-color: var(--color-light);
 }
 
-/* Logo: Tamanho seguro e relativo para o celular */
+header nav {
+    outline-color: #7A1A2A;
+}
+
 .nav-logo {
     width: auto;
     height: 2.5rem; 
@@ -66,6 +69,69 @@ body {
     color: var(--color-primary) !important;
 }
 
+.navbar-clean {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, transparent, var(--color-secondary), transparent) 1;
+}
+
+/* Enfeite no Título (Destaque para sabores excepcionais) */
+.text-highlight {
+    color: var(--color-secondary);
+    position: relative;
+    display: inline-block;
+}
+
+/* Linha rústica abaixo do destaque do título */
+.text-highlight::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 5px;
+    left: 0;
+    background: var(--color-secondary);
+    opacity: 0.4;
+    border-radius: 2px;
+}
+
+/* Moldura decorativa para a foto Hero (Desktop) */
+.hero-image-wrapper {
+    position: relative;
+    padding: 1rem;
+}
+
+/* Cantoneiras douradas para a foto */
+.hero-image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    border-top: 3px solid var(--color-secondary);
+    border-right: 3px solid var(--color-secondary);
+    z-index: -1;
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-bottom: 3px solid var(--color-secondary);
+    border-left: 3px solid var(--color-secondary);
+    z-index: -1;
+}
+
+/* Sombra suave e borda na imagem hero */
+.hero-img {
+    border: 8px solid var(--color-white);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+}
+
+
 /* Botão CTA Principal */
 .btn-cta {
     background-color: var(--color-light);
@@ -79,6 +145,37 @@ body {
     color: var(--color-primary);
     border-color: var(--color-dark);
     transform: translateY(-0.2rem);
+}
+
+/* =========================================
+   DIVISOR GEOMÉTRICO CLEAN
+   ========================================= */
+.elegant-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: var(--color-light); /* Mesma cor do final do Hero */
+    gap: 1.5rem;
+}
+
+.divider-line {
+    height: 1px;
+    flex: 1;
+    max-width: 300px;
+    background: linear-gradient(to right, transparent, var(--color-secondary), transparent);
+}
+
+.divider-icon {
+    color: var(--color-secondary);
+    opacity: 0.9;
+    transform: rotate(45deg); /* Losango */
+}
+
+/* Ajuste no padding do Hero para não ficar um buraco */
+.hero-section {
+    padding-bottom: 2rem !important;
+    background-color: var(--color-white) ;
 }
 
 /* =========================================
@@ -131,6 +228,52 @@ section { padding: 4rem 0; }
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light) 100%);
+    padding-bottom: 8rem;
+}
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg); /* Inverte para a curva subir suavemente */
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px; /* Altura da onda */
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    /* Usa a cor de fundo da seção vitrine para a transição ficar invisível */
+    fill: var(--color-secondary); 
+}
+
+
+/* No seu style.css, adicione ou atualize: */
+.text-highlight::after {
+    content: "";
+    position: absolute;
+    width: 105%; /* Um pouquinho maior que o texto */
+    height: 8px;
+    bottom: 2px;
+    left: -2%;
+    background: var(--color-secondary);
+    opacity: 0.25; /* Bem suave, como um marca-texto dourado */
+    z-index: -1; /* Fica atrás da letra */
+    border-radius: 2px;
+    transform: rotate(-1deg); /* Levemente inclinado para parecer manual */
+}
+
+/* Ajuste para celular */
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom svg {
+        height: 40px;
+    }
 }
 
 .hero-content {
