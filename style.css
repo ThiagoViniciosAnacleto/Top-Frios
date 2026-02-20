@@ -265,13 +265,12 @@ section { padding: 4rem 0; }
     border-radius: 1rem;
     overflow: hidden;
 }
-
 /* =========================================
    5. FOOTER
    ========================================= */
 .footer-custom {
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    background-color: var(--color-light);
+    color: var(--color-dark);
     padding: 3rem 0 1rem 0;
 }
 
@@ -288,12 +287,12 @@ section { padding: 4rem 0; }
 
 .footer-logo { height: 3rem; margin-bottom: 1rem; }
 .footer-social a {
-    color: var(--color-light);
+    color: var(--color-dark);
     font-size: 1.5rem;
     margin-left: 1rem;
     transition: var(--transition-default);
 }
-.footer-social a:hover { color: var(--color-secondary); }
+.footer-social a:hover { color: var(--color-dark); }
 .footer-bottom { font-size: 0.85rem; opacity: 0.8; }
 
 /* =========================================
