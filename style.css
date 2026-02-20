@@ -23,7 +23,6 @@
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 16px;
 }
 
@@ -31,25 +30,57 @@ body {
     font-family: var(--font-primary);
     color: var(--text-dark);
     line-height: 1.6;
-    overflow-x: hidden;
-    padding-top: 70px; 
 }
 
 .text-secondary-color { color: var(--secondary-color) !important; }
 
-/* --- NAVBAR PREMIUM --- */
 .navbar {
-    background-color: var(--primary-color);
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
+    background-color: var(--primary-color) !important;
+    padding: 12px 0 !important; 
+
+    align-items: flex-start !important;
 }
+
+/* --- CLASSE INJETADA PELO JAVASCRIPT --- */
+.navbar-fixed-custom {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.navbar > .container {
+    display: flex;
+    align-items: center; /* Mantém logo e botão alinhados entre si */
+    flex-wrap: wrap; /* Permite que o menu abra corretamente para baixo */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar-logo {
+    height: 45px !important; /* Tamanho exato e blindado para celular */
+    width: auto !important;
+    display: block;
+    object-fit: contain; 
+}
+.navbar-brand:hover .drop-shadow { transform: scale(1.05); }
 
 .drop-shadow {
     filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
-    transition: transform 0.3s;
+    transition: transform 0.3s; 
 }
-
-.navbar-brand:hover .drop-shadow { transform: scale(1.05); }
 
 .nav-link-red {
     color: var(--black) !important;
@@ -75,7 +106,24 @@ body {
 
 .nav-link-red:hover::after { width: 100%; }
 
-/* --- BOTÕES --- */
+@media (min-width: 992px) {
+    /* DEVOLVEMOS O SCROLL SUAVE SÓ PARA O PC (ONDE É SEGURO) */
+    html {
+        scroll-behavior: smooth; 
+    }
+
+    .navbar-logo {
+        height: 65px !important; 
+    }
+
+    .hero-section {
+        padding: 80px 0 60px 0 !important; 
+    }
+}
+
+/* =========================================
+   3. BOTÕES
+   ========================================= */
 .btn-cta-red {
     background-color: var(--red-bright);
     color: var(--white);
@@ -83,7 +131,6 @@ body {
     font-size: 1rem;
     transition: all 0.3s ease;
 }
-
 .btn-cta-red:hover {
     background-color: #d50000; 
     border-color: #d50000;
