@@ -107,3 +107,187 @@ body {
         width: 100%;
     }
 }
+
+/* =========================================
+   UTILITÁRIOS E CORES
+   ========================================= */
+.bg-light-custom { background-color: var(--color-light); }
+.text-primary-custom { color: var(--color-primary); }
+.text-highlight { color: var(--color-secondary); }
+
+section { padding: 4rem 0; }
+.section-header { margin-bottom: 3rem; }
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light) 100%);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-text { flex: 1; }
+.hero-image-wrapper { flex: 1; text-align: center; }
+.hero-img { width: 100%; max-width: 35rem; height: auto; object-fit: contain; }
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem); /* Texto cresce e diminui suavemente */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.btn-large {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+}
+
+/* =========================================
+   2. VITRINE (GRID MÁGICO)
+   ========================================= */
+.produtos-grid {
+    display: grid;
+    /* Aqui está o segredo: Cria colunas que se auto-ajustam 
+       sem precisar de media queries. Mínimo de 18rem de largura. */
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background: var(--color-white);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-default);
+}
+
+.produto-card:hover { transform: translateY(-0.5rem); }
+
+.produto-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Empurra o footer do card para baixo */
+}
+
+.produto-nome { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.produto-desc { font-size: 0.9rem; color: #666; flex-grow: 1; margin-bottom: 1.5rem; }
+
+.produto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.produto-preco {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.btn-whatsapp-small {
+    background-color: var(--color-whatsapp);
+    color: var(--color-white);
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-default);
+}
+.btn-whatsapp-small:hover { background-color: #128C7E; color: var(--color-white); }
+
+/* =========================================
+   3. HISTÓRIA E 4. LOJA
+   ========================================= */
+.historia-grid, .loja-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.fachada-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.loja-info h2 { color: var(--color-primary); margin-bottom: 2rem; font-weight: 700; }
+.info-bloco h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.info-bloco { margin-bottom: 1.5rem; }
+
+.loja-mapa {
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* =========================================
+   5. FOOTER
+   ========================================= */
+.footer-custom {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: 3rem 0 1rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2rem;
+}
+
+.footer-logo { height: 3rem; margin-bottom: 1rem; }
+.footer-social a {
+    color: var(--color-light);
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: var(--transition-default);
+}
+.footer-social a:hover { color: var(--color-secondary); }
+.footer-bottom { font-size: 0.85rem; opacity: 0.8; }
+
+/* =========================================
+   MEDIA QUERIES APENAS PARA LAYOUT
+   ========================================= */
+@media (min-width: 992px) {
+    /* Destrava o grid da história e loja para o lado a lado no PC */
+    .historia-grid, .loja-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .loja-mapa { aspect-ratio: 16 / 9; }
+}
