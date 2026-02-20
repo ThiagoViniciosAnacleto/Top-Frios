@@ -2,29 +2,38 @@
    1. VARIÁVEIS E BASE (MOBILE-FIRST)
    ========================================= */
 :root {
-    /* Paleta Premium - Queijos e Vinhos */
-    --color-primary: #7A1A2A;   /* Bordô/Vinho - Elegante e profundo */
-    --color-secondary: #D4AF37; /* Dourado Envelhecido - Sofisticação */
-    --color-dark: #2C3034;      /* Chumbo Escuro - Menos agressivo que o preto puro */
-    --color-light: #F9F7F3;     /* Creme/Off-white - Traz o aspecto artesanal/rústico */
+    --color-primary: #7A1A2A;   /* Bordô - Use para Títulos e Destaques Fortes */
+    --color-secondary: #D4AF37; /* Dourado - Use para ícones e linhas finas */
+    --color-dark: #2C3034;      /* Chumbo - Para textos de leitura longa */
+    --color-light: #FDFCFB;     /* Creme mais claro - Para um fundo mais limpo */
     --color-white: #ffffff;
     --color-whatsapp: #25D366;
-    
-    --font-main: 'Poppins', sans-serif;
-    --transition-default: all 0.3s ease;
+
+    --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --font-titles: 'Playfair Display', serif; /* Fonte clássica de luxo */
+    --font-body: 'Poppins', sans-serif;       /* Fonte moderna e limpa */
 }
+
 html {
-    scroll-behavior: smooth; /* Seguro agora que não temos barras fixas brigando com a tela */
+    scroll-behavior: smooth;
     font-size: 16px;
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     color: var(--color-dark);
     background-color: var(--color-light);
     line-height: 1.6;
     margin: 0;
     padding: 0;
+}
+
+/* Aplicando a Playfair Display para Títulos de impacto */
+h1, h2, .produto-nome {
+    font-family: var(--font-titles);
+    font-weight: 700;
+    letter-spacing: -0.02em; /* Títulos serifados ficam mais chiques mais "juntos" */
 }
 
 .drop-shadow {
@@ -70,8 +79,9 @@ header nav {
 }
 
 .navbar-clean {
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(to right, transparent, var(--color-secondary), transparent) 1;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Linha dourada ultra fina */
 }
 
 /* Enfeite no Título (Destaque para sabores excepcionais) */
@@ -154,9 +164,8 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0;
-    background-color: var(--color-light); /* Mesma cor do final do Hero */
-    gap: 1.5rem;
+    padding: 4rem 0;
+    gap: 1rem;
 }
 
 .divider-line {
@@ -174,8 +183,8 @@ header nav {
 
 /* Ajuste no padding do Hero para não ficar um buraco */
 .hero-section {
-    padding-bottom: 2rem !important;
-    background-color: var(--color-white) ;
+    padding: 100px 0;
+    background: radial-gradient(circle at top right, #FDFCFB 0%, #ffffff 100%);
 }
 
 /* =========================================
@@ -210,7 +219,14 @@ header nav {
    ========================================= */
 .bg-light-custom { background-color: var(--color-light); }
 .text-primary-custom { color: var(--color-primary); }
-.text-highlight { color: var(--color-secondary); }
+
+.text-highlight {
+    color: var(--color-secondary);
+    background: linear-gradient(120deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.3em;
+    background-position: 0 88%;
+}
 
 section { padding: 4rem 0; }
 .section-header { margin-bottom: 3rem; }
@@ -287,7 +303,7 @@ section { padding: 4rem 0; }
 .hero-img { width: 100%; max-width: 35rem; height: auto; object-fit: contain; }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem); /* Texto cresce e diminui suavemente */
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -408,6 +424,7 @@ section { padding: 4rem 0; }
 }
 
 .produto-preco {
+    font-family: var(--font-titles);
     font-size: 1.4rem;
     font-weight: 800;
     color: var(--color-primary);
