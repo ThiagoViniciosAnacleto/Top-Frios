@@ -569,34 +569,100 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-   5. FOOTER
+   RODAPÉ REESTRUTURADO
    ========================================= */
 .footer-custom {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-    padding: 3rem 0 1rem 0;
+    background-color: var(--color-light); /* Fundo creme premium */
+    padding: 5rem 0 2rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.2); /* Linha dourada fina */
 }
 
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 2rem;
+/* Ajuste de tamanho da logo no rodapé */
+.footer-logo {
+    height: 4rem; /* Altura controlada para não dominar a seção */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    filter: brightness(0); /* Opcional: deixa a logo totalmente preta para um visual mais sóbrio */
+    opacity: 0.9;
 }
 
-.footer-logo { height: 3rem; margin-bottom: 1rem; }
-.footer-social a {
+/* No mobile, podemos deixar ela um pouco menor se necessário */
+@media (max-width: 767px) {
+    .footer-logo {
+        height: 3.5rem;
+    }
+}
+.footer-title {
+    font-family: 'Playfair Display', serif; /* Mantém a fonte clássica nos títulos */
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Detalhe dourado abaixo do título do rodapé */
+.footer-title::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-secondary);
+    bottom: -8px;
+    left: 0;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: #666;
+    max-width: 300px;
+}
+
+.footer-links li, .footer-info li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.footer-links a {
+    text-decoration: none;
     color: var(--color-dark);
-    font-size: 1.5rem;
-    margin-left: 1rem;
     transition: var(--transition-default);
 }
-.footer-social a:hover { color: var(--color-dark); }
-.footer-bottom { font-size: 0.85rem; opacity: 0.8; }
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+.footer-info i {
+    color: var(--color-secondary);
+    width: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: var(--transition-default);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+.footer-bottom p {
+    letter-spacing: 0.5px;
+}
 
 /* =========================================
    MEDIA QUERIES APENAS PARA LAYOUT
