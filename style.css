@@ -164,7 +164,6 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 0;
     gap: 1rem;
 }
 
@@ -182,9 +181,27 @@ header nav {
 }
 
 /* Ajuste no padding do Hero para não ficar um buraco */
-.hero-section {
-    padding: 100px 0;
-    background: radial-gradient(circle at top right, #FDFCFB 0%, #ffffff 100%);
+
+
+@media (max-width: 991px) {
+    /* Zera o espaço no topo da vitrine especificamente no mobile */
+    #vitrine.produtos-section {
+        padding-top: 0 !important;
+    }
+
+    /* Ajusta o espaçamento do divisor para que ele "cole" na vitrine */
+    .elegant-divider {
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        background-color: var(--color-white); /* Mantém a cor do Hero */
+    }
+
+    /* Ajusta a margem da vitrine para compensar o divisor */
+    .section-header {
+        margin-top: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
 }
 
 /* =========================================
@@ -228,7 +245,7 @@ header nav {
     background-position: 0 88%;
 }
 
-section { padding: 4rem 0; }
+section { padding: 2rem 0; }
 .section-header { margin-bottom: 3rem; }
 .section-header h2 {
     font-size: clamp(2rem, 4vw, 2.5rem);
@@ -244,7 +261,6 @@ section { padding: 4rem 0; }
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light) 100%);
-    padding-bottom: 8rem;
 }
 
 .custom-shape-divider-bottom {
@@ -294,7 +310,6 @@ section { padding: 4rem 0; }
 
 .hero-content {
     display: flex;
-    flex-direction: column; /* Texto em cima, Imagem embaixo no mobile */
     align-items: center;
     text-align: center;
     gap: 2rem;
@@ -309,7 +324,7 @@ section { padding: 4rem 0; }
     flex: 1; 
     text-align: center; 
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -344,18 +359,20 @@ section { padding: 4rem 0; }
 
     .hero-title {
         font-size: 2rem !important;     /* Diminui um pouco o título no celular */
-        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
     }
 
     .hero-content {
         gap: 0rem !important; /* Distância mínima entre texto e imagem */
         padding-top: 0 !important;
+        flex-direction: column; /* Texto em cima, Imagem embaixo no mobile */
     }
 
     .hero-subtitle {
         margin-bottom: 0.5rem !important;
         font-size: 0.95rem !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
         line-height: 1.4;
     }
 
