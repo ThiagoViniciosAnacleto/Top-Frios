@@ -294,12 +294,25 @@ section { padding: 4rem 0; }
 
 .hero-content {
     display: flex;
+    flex-direction: column; /* Texto em cima, Imagem embaixo no mobile */
     align-items: center;
-    gap: 3rem;
+    text-align: center;
+    gap: 2rem;
 }
 
-.hero-text { flex: 1; }
-.hero-image-wrapper { flex: 1; text-align: center; }
+.hero-text { 
+    width: 100%;
+    flex: 1; 
+}
+
+.hero-image-wrapper { 
+    flex: 1; 
+    text-align: center; 
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .hero-img { width: 100%; max-width: 35rem; height: auto; object-fit: contain; }
 
 .hero-title {
@@ -320,6 +333,43 @@ section { padding: 4rem 0; }
     font-size: 1.1rem;
     padding: 1rem 2.5rem;
 }
+
+/* Ajuste Fino para Mobile */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 0rem !important;   /* Diminui a distância do NAV */
+        padding-bottom: 1rem !important;
+        min-height: auto !important;    /* Remove a altura mínima forçada */
+    }
+
+    .hero-title {
+        font-size: 2rem !important;     /* Diminui um pouco o título no celular */
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-content {
+        gap: 0rem !important; /* Distância mínima entre texto e imagem */
+        padding-top: 0 !important;
+    }
+
+    .hero-subtitle {
+        margin-bottom: 0.5rem !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 1.5rem !important;
+        line-height: 1.4;
+    }
+
+    .hero-image-wrapper {
+        max-width: 300px !important;    /* Foto menor para caber na tela sem scroll */
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .hero-img {
+        border-width: 8px !important;   /* Moldura mais fina para ganhar espaço */
+    }
+}
+
 /* =========================================
    2. VITRINE (MASONRY / PINTEREST STYLE)
    ========================================= */
