@@ -33,7 +33,7 @@ body {
 h1, h2, .produto-nome {
     font-family: var(--font-titles);
     font-weight: 700;
-    letter-spacing: -0.02em; /* Títulos serifados ficam mais chiques mais "juntos" */
+    letter-spacing: -0.02em;
 }
 
 .drop-shadow {
@@ -41,7 +41,7 @@ h1, h2, .produto-nome {
 }
 
 /* =========================================
-   2. NAVBAR PERFEITA E FLUIDA
+   2. NAVBAR
    ========================================= */
 .bg-primary-custom {
     background-color: var(--color-light);
@@ -62,7 +62,6 @@ header nav {
     transform: scale(1.05);
 }
 
-/* Links do Menu no Celular */
 .navbar-nav .nav-link {
     color: var(--color-dark);
     font-size: 1.1rem;
@@ -157,9 +156,6 @@ header nav {
     transform: translateY(-0.2rem);
 }
 
-/* =========================================
-   DIVISOR GEOMÉTRICO CLEAN
-   ========================================= */
 .elegant-divider {
     display: flex;
     align-items: center;
@@ -388,7 +384,7 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-   2. VITRINE (MASONRY / PINTEREST STYLE)
+    2. VITRINE (MASONRY / PINTEREST STYLE)
    ========================================= */
 .produtos-masonry {
     column-count: 1; /* No celular, fica 1 por linha */
