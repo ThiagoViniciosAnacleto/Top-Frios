@@ -177,8 +177,6 @@ header nav {
 }
 
 /* Ajuste no padding do Hero para não ficar um buraco */
-
-
 @media (max-width: 991px) {
     /* Zera o espaço no topo da vitrine especificamente no mobile */
     #vitrine.produtos-section {
@@ -250,7 +248,7 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-   1. HERO SECTION
+   4. HERO SECTION
    ========================================= */
 .hero-section {
     min-height: 80vh;
@@ -282,7 +280,7 @@ section { padding: 2rem 0; }
 }
 
 
-/* No seu style.css, adicione ou atualize: */
+/* Detalhe de marca-texto dourado */
 .text-highlight::after {
     content: "";
     position: absolute;
@@ -384,31 +382,50 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-    2. VITRINE (MASONRY / PINTEREST STYLE)
+    5. VITRINE (GRID FLUIDO ALINHADO)
    ========================================= */
+
+/* Subtítulos das Vitrines */
+.vitrine-subtitle {
+    font-family: var(--font-titles);
+    color: var(--color-primary);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.vitrine-subtitle::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+}
+
+/* Container Principal com Grid Moderno (Substitui o column-count) */
 .produtos-masonry {
-    column-count: 1; /* No celular, fica 1 por linha */
-    column-gap: 2rem;
+    display: grid;
+    /* Grid fluido sem precisar de media queries. Cria colunas conforme o espaço! */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+    align-items: stretch; /* Garante que todos os cards na mesma linha tenham a mesma altura */
 }
 
-/* No tablet, divide em 2 colunas */
-@media (min-width: 768px) {
-    .produtos-masonry { column-count: 2; }
-}
-
-/* No PC, divide em 3 colunas */
-@media (min-width: 992px) {
-    .produtos-masonry { column-count: 3; }
-}
-
+/* O Card se torna um Flex Container */
 .produto-card {
-    break-inside: avoid; /* O Segredo: Impede que o cartão seja "rasgado" entre uma coluna e outra */
-    margin-bottom: 2rem; /* Espaço vertical entre os cartões */
     background: var(--color-white);
     border-radius: 1.2rem;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Empilha foto e informações */
+    height: 100%;           /* Ocupa 100% da altura esticada pelo Grid */
     transition: var(--transition-default);
     box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.05);
 }
@@ -422,23 +439,21 @@ section { padding: 2rem 0; }
 .produto-img {
     width: 100%;
     height: 100%;
-    /* AQUI ESTÁ A MÁGICA: 'contain' garante que a foto apareça 
-       INTEIRA, sem cortar nenhum pedaço do produto. */
     object-fit: contain; 
     display: block;
     transition: var(--transition-default);
 }
 
 .produto-img-wrapper {
-    height: 350px; /* Altura fixa para todos os cartões. Chega de scroll infinito! */
-    background-color: #f0ece6; /* Um tom levemente mais escuro que o off-white para criar a "moldura" */
+    height: 350px; /* Altura fixa para manter o padrão das fotos */
+    background-color: #f0ece6;
     display: flex;
-    align-items: center;     /* Centraliza a foto verticalmente na moldura */
-    justify-content: center; /* Centraliza a foto horizontalmente */
+    align-items: center;     
+    justify-content: center; 
     border-bottom: 2px solid var(--color-light);
     overflow: hidden;
-    position: relative; /* Necessário para a lupa ficar por cima */
-    cursor: pointer;    /* Muda a setinha para a mão de clique */
+    position: relative; 
+    cursor: pointer;    
 }
 
 .badge-item {
@@ -472,38 +487,52 @@ section { padding: 2rem 0; }
 .zoom-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Fundo escurinho */
+    background: rgba(0, 0, 0, 0.4); 
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Começa invisível */
+    opacity: 0; 
     transition: var(--transition-default);
     z-index: 2;
 }
 
 .produto-img-wrapper:hover .zoom-overlay {
-    opacity: 1; /* Aparece ao passar o mouse */
+    opacity: 1; 
 }
 
 .zoom-overlay i {
     color: var(--color-white);
     font-size: 3rem;
-    transform: scale(0.5); /* Começa pequena */
+    transform: scale(0.5); 
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .produto-img-wrapper:hover .zoom-overlay i {
-    transform: scale(1); /* Dá um efeito de "pulo" na lupa */
+    transform: scale(1); 
 }
 
+/* Área de informações Flex */
 .produto-info {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    flex-grow: 1; /* Faz esta área preencher o restante do cartão */
 }
 
-.produto-nome { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark); }
-.produto-desc { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+.produto-nome { 
+    font-size: 1.25rem; 
+    font-weight: 700; 
+    margin-bottom: 0.5rem; 
+    color: var(--color-dark); 
+}
+
+/* O "Pulo do Gato": a mola que empurra o rodapé para baixo */
+.produto-desc { 
+    font-size: 0.9rem; 
+    color: #666; 
+    margin-bottom: 1.5rem; 
+    flex-grow: 1; /* Estica para preencher o vazio e empurrar o preço para baixo */
+}
 
 .produto-footer {
     display: flex;
@@ -511,7 +540,7 @@ section { padding: 2rem 0; }
     align-items: center;
     border-top: 1px solid #eee;
     padding-top: 1rem;
-    margin-top: auto; /* Garante que o rodapé fique no fundo do cartão */
+    /* margin-top: auto; (pode manter, mas o flex-grow acima já resolve) */
 }
 
 .produto-preco {
@@ -533,7 +562,7 @@ section { padding: 2rem 0; }
 .btn-whatsapp-small:hover { background-color: #128C7E; color: var(--color-white); }
 
 /* =========================================
-4. LOJA
+   6. LOJA
    ========================================= */
 .loja-grid {
     display: grid;
@@ -565,23 +594,7 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-   MEDIA QUERIES APENAS PARA LAYOUT
-   ========================================= */
-@media (min-width: 992px) {
-    /* Destrava o grid da história e loja para o lado a lado no PC */
-    .historia-grid, .loja-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .loja-mapa { aspect-ratio: 16 / 9; }
-
-    /* MÁGICA DO ALINHAMENTO AQUI */
-    .loja-col-direita {
-        margin-top: 6.5rem; /* Empurra o bloco inteiro para baixo até alinhar com a foto */
-    }
-}
-
-/* =========================================
-   AVALIAÇÕES (REVIEWS)
+   7. AVALIAÇÕES (REVIEWS)
    ========================================= */
 .review-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -593,7 +606,7 @@ section { padding: 2rem 0; }
 }
 
 /* =========================================
-   RODAPÉ REESTRUTURADO
+   8. RODAPÉ REESTRUTURADO
    ========================================= */
 .footer-custom {
     background-color: var(--color-light); /* Fundo creme premium */
@@ -697,4 +710,8 @@ section { padding: 2rem 0; }
         grid-template-columns: 1fr 1fr;
     }
     .loja-mapa { aspect-ratio: 16 / 9; }
+
+    .loja-col-direita {
+        margin-top: 6.5rem; /* Empurra o bloco inteiro para baixo até alinhar com a foto */
+    }
 }
