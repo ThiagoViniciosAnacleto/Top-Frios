@@ -42,4 +42,65 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+        /* =========================================
+    EFEITOS DE SCROLL REVEAL (Aparecer ao rolar)
+    ========================================= */
+    
+    // Verifica se a biblioteca foi carregada corretamente no HTML
+    if (typeof ScrollReveal !== 'undefined') {
+        
+        // Configuração padrão premium (Suave, vem de baixo para cima)
+        const revealPremium = {
+            distance: '50px',
+            duration: 1000,
+            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)', // Curva suave idêntica ao CSS
+            opacity: 0,
+            interval: 150 // O segredo: se tiver vários, eles aparecem um após o outro
+        };
+
+        // 1. Anima os Divisores Elegantes (Os losangos)
+        ScrollReveal().reveal('.elegant-divider', { 
+            ...revealPremium, 
+            origin: 'bottom',
+            distance: '30px'
+        });
+
+        // 2. Anima os Títulos das Seções (Vitrine, Avaliações, Loja)
+        ScrollReveal().reveal('.section-header, .vitrine-divisor, .loja-header', { 
+            ...revealPremium, 
+            origin: 'bottom',
+            delay: 100
+        });
+
+        // 3. O Efeito UAU: Anima os cartões de produtos um por um (Cascata)
+        ScrollReveal().reveal('.produto-card', { 
+            ...revealPremium, 
+            origin: 'bottom',
+            interval: 200 // Demora 200ms entre um cartão e outro
+        });
+
+        // 4. Anima as Avaliações também em Cascata
+        ScrollReveal().reveal('.review-card', { 
+            ...revealPremium, 
+            origin: 'bottom',
+            interval: 200 
+        });
+
+        // 5. Anima a seção da Loja (A foto vem da esquerda, o texto da direita)
+        ScrollReveal().reveal('.loja-col-esquerda', { 
+            ...revealPremium, 
+            origin: 'left', // A foto da loja desliza da esquerda
+            distance: '80px'
+        });
+
+        ScrollReveal().reveal('.loja-col-direita', { 
+            ...revealPremium, 
+            origin: 'right', // Os contatos deslizam da direita
+            distance: '80px',
+            delay: 200
+        });
+    } else {
+        console.warn("ScrollReveal.js não foi carregado. As animações de rolagem não serão exibidas.");
+    }
+
 });

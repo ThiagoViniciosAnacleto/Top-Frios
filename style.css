@@ -715,3 +715,124 @@ section { padding: 2rem 0; }
         margin-top: 6.5rem; /* Empurra o bloco inteiro para baixo até alinhar com a foto */
     }
 }
+
+/* =========================================
+   9. ANIMAÇÕES E MICROINTERAÇÕES (FRUFRUS)
+   ========================================= */
+
+/* EFEITO 1: "Respiração" (Flutuação) na Foto do Hero */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); } /* Sobe 10px suavemente */
+    100% { transform: translateY(0px); }
+}
+
+.hero-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* EFEITO 2: Reflexo de Brilho nos Botões (Como um flash de luz passando) */
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
+.btn-cta, .btn-whatsapp-small {
+    position: relative;
+    overflow: hidden; /* Não deixa o brilho vazar do botão */
+}
+
+.btn-cta::after, .btn-whatsapp-small::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    /* Cria a faixa de luz semi-transparente */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg); /* Dá a inclinação da luz */
+    animation: shine 4s infinite; /* Repete a cada 4 segundos */
+}
+
+/* EFEITO 3: Entrada Suave (Fade In Up) no Texto Inicial ao carregar a página */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.hero-text {
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* EFEITO 4: O "Marca-Texto" Dourado crescendo ao passar o mouse */
+.vitrine-subtitle::after {
+    transition: var(--transition-default);
+}
+
+.vitrine-divisor:hover .vitrine-subtitle::after {
+    width: 100px; /* A linha dourada estica quando passa o mouse perto do título */
+    background-color: var(--color-primary); /* Muda pra bordô */
+}
+
+/* =========================================
+   EFEITOS DE SCROLL REVEAL (Aparecer ao rolar)
+   ========================================= */
+
+// Configuração padrão premium (Suave, vem de baixo para cima)
+const revealPremium = {
+    distance: '50px',
+    duration: 1000,
+    easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)', // Curva suave idêntica ao CSS
+    opacity: 0,
+    interval: 150 // O segredo: se tiver vários, eles aparecem um após o outro (efeito cascata)
+};
+
+// 1. Anima os Divisores Elegantes (Os losangos)
+ScrollReveal().reveal('.elegant-divider', { 
+    ...revealPremium, 
+    origin: 'bottom',
+    distance: '30px'
+});
+
+// 2. Anima os Títulos das Seções (Vitrine, Avaliações, Loja)
+ScrollReveal().reveal('.section-header, .vitrine-divisor, .loja-header', { 
+    ...revealPremium, 
+    origin: 'bottom',
+    delay: 100
+});
+
+// 3. O Efeito UAU: Anima os cartões de produtos um por um (Cascata)
+ScrollReveal().reveal('.produto-card', { 
+    ...revealPremium, 
+    origin: 'bottom',
+    interval: 200 // Demora 200ms entre um cartão e outro
+});
+
+// 4. Anima as Avaliações também em Cascata
+ScrollReveal().reveal('.review-card', { 
+    ...revealPremium, 
+    origin: 'bottom',
+    interval: 200 
+});
+
+// 5. Anima a seção da Loja (A foto vem da esquerda, o texto da direita)
+ScrollReveal().reveal('.loja-col-esquerda', { 
+    ...revealPremium, 
+    origin: 'left', // A foto da loja desliza da esquerda
+    distance: '80px'
+});
+
+ScrollReveal().reveal('.loja-col-direita', { 
+    ...revealPremium, 
+    origin: 'right', // Os contatos deslizam da direita
+    distance: '80px',
+    delay: 200
+});
