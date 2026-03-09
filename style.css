@@ -109,6 +109,45 @@ header nav {
     padding: 1rem;
 }
 
+/* O "Sua casa do Queijos e Cia" bem elaborado */
+.hero-fancy-subtitle {
+    font-family: var(--font-titles);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--color-dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Mantendo a moldura de quadro no Carrossel */
+.hero-img-frame {
+    border: 8px solid var(--color-white);
+    border-radius: 4px;
+    overflow: hidden; /* Garante que as fotos não vazem da borda redonda */
+    background-color: var(--color-white);
+}
+
+
+/* Padronizando o tamanho das fotos do carrossel para não pular a tela */
+.hero-img-frame img {
+    aspect-ratio: 4/5; /* Formato retrato chique */
+    object-fit: cover; /* Faz a foto preencher a moldura sem distorcer */
+}
+
+/* Ajustes finos no mobile para a nova logo */
+@media (max-width: 991px) {
+    .hero-main-logo {
+        max-width: 200px;
+        margin-top: 1rem;
+    }
+    
+    .hero-fancy-subtitle {
+        font-size: 2rem !important;
+    }
+}
+.hero-fancy-subtitle span {
+    font-style: italic; /* Dá o toque elegante na parte do "Queijos & Cia" */
+}
+
 /* Cantoneiras douradas para a foto */
 .hero-image-wrapper::before {
     content: "";
@@ -781,58 +820,3 @@ section { padding: 2rem 0; }
     width: 100px; /* A linha dourada estica quando passa o mouse perto do título */
     background-color: var(--color-primary); /* Muda pra bordô */
 }
-
-/* =========================================
-   EFEITOS DE SCROLL REVEAL (Aparecer ao rolar)
-   ========================================= */
-
-// Configuração padrão premium (Suave, vem de baixo para cima)
-const revealPremium = {
-    distance: '50px',
-    duration: 1000,
-    easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)', // Curva suave idêntica ao CSS
-    opacity: 0,
-    interval: 150 // O segredo: se tiver vários, eles aparecem um após o outro (efeito cascata)
-};
-
-// 1. Anima os Divisores Elegantes (Os losangos)
-ScrollReveal().reveal('.elegant-divider', { 
-    ...revealPremium, 
-    origin: 'bottom',
-    distance: '30px'
-});
-
-// 2. Anima os Títulos das Seções (Vitrine, Avaliações, Loja)
-ScrollReveal().reveal('.section-header, .vitrine-divisor, .loja-header', { 
-    ...revealPremium, 
-    origin: 'bottom',
-    delay: 100
-});
-
-// 3. O Efeito UAU: Anima os cartões de produtos um por um (Cascata)
-ScrollReveal().reveal('.produto-card', { 
-    ...revealPremium, 
-    origin: 'bottom',
-    interval: 200 // Demora 200ms entre um cartão e outro
-});
-
-// 4. Anima as Avaliações também em Cascata
-ScrollReveal().reveal('.review-card', { 
-    ...revealPremium, 
-    origin: 'bottom',
-    interval: 200 
-});
-
-// 5. Anima a seção da Loja (A foto vem da esquerda, o texto da direita)
-ScrollReveal().reveal('.loja-col-esquerda', { 
-    ...revealPremium, 
-    origin: 'left', // A foto da loja desliza da esquerda
-    distance: '80px'
-});
-
-ScrollReveal().reveal('.loja-col-direita', { 
-    ...revealPremium, 
-    origin: 'right', // Os contatos deslizam da direita
-    distance: '80px',
-    delay: 200
-});
