@@ -2,7 +2,7 @@
    1. VARIÁVEIS E BASE (MOBILE-FIRST)
    ========================================= */
 :root {
-    --color-primary: #7A1A2A;   /* Bordô - Use para Títulos e Destaques Fortes */
+    --color-primary: #E02423;   /* Bordô - Use para Títulos e Destaques Fortes */
     --color-secondary: #D4AF37; /* Dourado - Use para ícones e linhas finas */
     --color-dark: #2C3034;      /* Chumbo - Para textos de leitura longa */
     --color-light: #FDFCFB;     /* Creme mais claro - Para um fundo mais limpo */
@@ -83,30 +83,9 @@ header nav {
     border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Linha dourada ultra fina */
 }
 
-/* Enfeite no Título (Destaque para sabores excepcionais) */
-.text-highlight {
-    color: var(--color-secondary);
-    position: relative;
-    display: inline-block;
-}
-
-/* Linha rústica abaixo do destaque do título */
-.text-highlight::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: 5px;
-    left: 0;
-    background: var(--color-secondary);
-    opacity: 0.4;
-    border-radius: 2px;
-}
-
 /* Moldura decorativa para a foto Hero (Desktop) */
 .hero-image-wrapper {
     position: relative;
-    padding: 1rem;
 }
 
 /* O "Sua casa do Queijos e Cia" bem elaborado */
@@ -196,6 +175,7 @@ header nav {
 }
 
 .elegant-divider {
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,7 +207,6 @@ header nav {
         padding: 0 !important;
         margin-bottom: 0 !important;
         padding-bottom: 0 !important;
-        background-color: var(--color-white); /* Mantém a cor do Hero */
     }
 
     /* Ajusta a margem da vitrine para compensar o divisor */
@@ -271,17 +250,16 @@ header nav {
 .text-primary-custom { color: var(--color-primary); }
 
 .text-highlight {
-    color: var(--color-secondary);
-    background: linear-gradient(120deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+    color: var(--color-primary);
     background-repeat: no-repeat;
     background-size: 100% 0.3em;
     background-position: 0 88%;
 }
 
-section { padding: 2rem 0; }
+section
 .section-header { margin-bottom: 3rem; }
 .section-header h2 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(2rem, 4vw, 2rem);
     color: var(--color-primary);
     font-weight: 700;
 }
@@ -318,22 +296,6 @@ section { padding: 2rem 0; }
     fill: var(--color-secondary); 
 }
 
-
-/* Detalhe de marca-texto dourado */
-.text-highlight::after {
-    content: "";
-    position: absolute;
-    width: 105%; /* Um pouquinho maior que o texto */
-    height: 8px;
-    bottom: 2px;
-    left: -2%;
-    background: var(--color-secondary);
-    opacity: 0.25; /* Bem suave, como um marca-texto dourado */
-    z-index: -1; /* Fica atrás da letra */
-    border-radius: 2px;
-    transform: rotate(-1deg); /* Levemente inclinado para parecer manual */
-}
-
 /* Ajuste para celular */
 @media (max-width: 767px) {
     .custom-shape-divider-bottom svg {
@@ -367,7 +329,6 @@ section { padding: 2rem 0; }
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
     color: var(--color-dark);
 }
 
@@ -386,13 +347,11 @@ section { padding: 2rem 0; }
 @media (max-width: 991px) {
     .hero-section {
         padding-top: 0rem !important;   /* Diminui a distância do NAV */
-        padding-bottom: 1rem !important;
         min-height: auto !important;    /* Remove a altura mínima forçada */
     }
 
     .hero-title {
-        font-size: 2rem !important;     /* Diminui um pouco o título no celular */
-        margin-top: 1rem !important;
+        font-size: 1rem !important;     /* Diminui um pouco o título no celular */
         margin-bottom: 0.5rem !important;
     }
 
@@ -403,9 +362,7 @@ section { padding: 2rem 0; }
     }
 
     .hero-subtitle {
-        margin-bottom: 0.5rem !important;
         font-size: 0.95rem !important;
-        margin-bottom: 0.5rem !important;
         line-height: 1.4;
     }
 
@@ -497,7 +454,7 @@ section { padding: 2rem 0; }
 
 .badge-item {
     background-color: rgba(255, 255, 255, 0.9);
-    color: var(--color-primary);
+    color: var(--color-dark);
     padding: 4px 12px;
     border-radius: 50px;
     font-size: 0.75rem;
@@ -586,7 +543,7 @@ section { padding: 2rem 0; }
     font-family: var(--font-titles);
     font-size: 1.4rem;
     font-weight: 800;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 .btn-whatsapp-small {
@@ -655,11 +612,10 @@ section { padding: 2rem 0; }
 
 /* Ajuste de tamanho da logo no rodapé */
 .footer-logo {
-    height: 4rem; /* Altura controlada para não dominar a seção */
+    height: 8rem; /* Altura controlada para não dominar a seção */
     width: auto;
     object-fit: contain;
     margin-bottom: 1.5rem;
-    filter: brightness(0); /* Opcional: deixa a logo totalmente preta para um visual mais sóbrio */
     opacity: 0.9;
 }
 
