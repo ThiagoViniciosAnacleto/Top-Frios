@@ -1,6 +1,23 @@
 /* =========================================
    1. VARIÁVEIS E BASE (MOBILE-FIRST)
    ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 :root {
     --color-primary: #E02423;   /* Bordô - Use para Títulos e Destaques Fortes */
     --color-secondary: #D4AF37; /* Dourado - Use para ícones e linhas finas */
@@ -490,6 +507,7 @@ section
     opacity: 0; 
     transition: var(--transition-default);
     z-index: 2;
+    pointer-events: none;
 }
 
 .produto-img-wrapper:hover .zoom-overlay {
@@ -557,9 +575,82 @@ section
 }
 .btn-whatsapp-small:hover { background-color: #128C7E; color: var(--color-white); }
 
+/* --- Seção Nossos Produtos (CSS Atualizado p/ Zoom) --- */
+.secao-produtos {
+    background-color: #fcfcfc;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    width: 100%;
+}
+
+.card-produto {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: translateY(-4px);
+}
+
+/* Nova formatação para imagens clicáveis e fluidas */
+.card-produto a {
+    display: block;
+    overflow: hidden;
+    cursor: zoom-in; /* Muda o cursor para indicar que dá pra dar zoom */
+}
+
+.img-zoom {
+    width: 100%;
+    /* Define uma proporção visual: min 3/2, ideal 16/9, max 16/9 */
+    aspect-ratio: clamp(3 / 2, 16 / 9, 16 / 9); 
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito sutil de zoom no hover para indicar interatividade */
+.card-produto:hover .img-zoom {
+    transform: scale(1); 
+}
+
+.card-conteudo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-conteudo h3 {
+    font-size: clamp(1.2rem, 2vw + 0.5rem, 1.4rem);
+    color: #c8102e;
+    margin-bottom: 0.8rem;
+}
+
+.card-conteudo p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.lista-geleias p {
+    font-size: 0.9rem;
+}
+
+
 /* =========================================
-   6. LOJA
-   ========================================= */
+    6. LOJA
+========================================= */
 .loja-grid {
     display: grid;
     grid-template-columns: 1fr;
