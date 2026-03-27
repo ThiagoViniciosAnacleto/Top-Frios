@@ -215,7 +215,7 @@ header nav {
 /* Ajuste no padding do Hero para não ficar um buraco */
 @media (max-width: 991px) {
     /* Zera o espaço no topo da vitrine especificamente no mobile */
-    #vitrine.produtos-section {
+    #vitrine.produtos-section # {
         padding-top: 0 !important;
     }
 
