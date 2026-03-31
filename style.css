@@ -106,9 +106,9 @@ header nav {
 }
 
 .hero-fancy-subtitle span {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--font-titles);
     font-weight: 300; /* O segredo: peso Light (fino e delicado) */
-    font-size: 1.1em; /* Tamanho natural e legível */
+    font-size: 1.5rem; /* Tamanho natural e legível */
     color: var(--color-primary);
     font-style: normal;
     letter-spacing: 0.05em; /* Levíssimo respiro */
@@ -516,8 +516,17 @@ section
     font-size: 0.9rem; 
     color: #666; 
     margin-bottom: 1.5rem; 
-    flex-grow: 1; /* Estica para preencher o vazio e empurrar o preço para baixo */
+    flex-grow: 1;
+
     text-align: justify;
+    
+    /* Ativa hífens automáticos para evitar espaços gigantes */
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    
+    /* Ajuda o navegador a decidir onde quebrar a linha */
+    word-break: break-word;
 }
 
 .produto-footer {
