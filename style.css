@@ -58,7 +58,7 @@ h1, h2, .produto-nome {
 }
 
 /* =========================================
-   2. NAVBAR
+    2. NAVBAR
    ========================================= */
 .bg-primary-custom {
     background-color: var(--color-light);
@@ -70,7 +70,7 @@ header nav {
 
 .nav-logo {
     width: auto;
-    height: 2.5rem; 
+    height: 3.5rem; 
     object-fit: contain;
     transition: var(--transition-default);
 }
