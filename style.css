@@ -1,21 +1,21 @@
 /* =========================================
-   1. VARIÁVEIS E BASE (MOBILE-FIRST)
+    1. VARIÁVEIS E BASE (MOBILE-FIRST)
    ========================================= */
 
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 img, video, canvas, svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 html, body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 
 :root {
@@ -234,7 +234,7 @@ header nav {
 }
 
 /* =========================================
-   3. MEDIA QUERIES (DESKTOP)
+    3. MEDIA QUERIES (DESKTOP)
    ========================================= */
 @media (min-width: 992px) {
     /* Logo cresce de forma fluida para telas grandes */
@@ -517,6 +517,7 @@ section
     color: #666; 
     margin-bottom: 1.5rem; 
     flex-grow: 1; /* Estica para preencher o vazio e empurrar o preço para baixo */
+    text-align: justify;
 }
 
 .produto-footer {
