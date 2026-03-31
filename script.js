@@ -12,15 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // ==========================================
     const navbar = document.querySelector(".navbar"); 
     const scrollThreshold = 60; 
+    let isSticky = false; // Cria uma variável de controle
 
     if (navbar) {
         window.addEventListener("scroll", function() {
-            if (window.scrollY > scrollThreshold) {
+            if (window.scrollY > scrollThreshold && !isSticky) {
+                // Só executa se passou do limite E ainda não está fixo
                 navbar.classList.add("navbar-fixed-custom");
                 document.body.style.paddingTop = navbar.offsetHeight + 'px';
-            } else {
+                isSticky = true;
+            } else if (window.scrollY <= scrollThreshold && isSticky) {
+                // Só executa se voltou ao topo E está fixo
                 navbar.classList.remove("navbar-fixed-custom");
                 document.body.style.paddingTop = '0';
+                isSticky = false;
             }
         });
     }
