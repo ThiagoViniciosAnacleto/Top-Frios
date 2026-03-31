@@ -393,34 +393,6 @@ section
     }
 }
 
-/* =========================================
-    5. VITRINE (GRID FLUIDO ALINHADO)
-   ========================================= */
-
-/* Subtítulos das Vitrines */
-.vitrine-subtitle {
-    font-family: var(--font-titles);
-    color: var(--color-primary);
-    font-size: clamp(1.8rem, 3vw, 2.2rem);
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.vitrine-subtitle::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--color-secondary);
-    border-radius: 2px;
-}
-
 /* Container Principal com Grid Moderno (Substitui o column-count) */
 .produtos-masonry {
     display: grid;
@@ -609,8 +581,7 @@ section
 
 .img-zoom {
     width: 100%;
-    /* Define uma proporção visual: min 3/2, ideal 16/9, max 16/9 */
-    aspect-ratio: clamp(3 / 2, 16 / 9, 16 / 9); 
+    aspect-ratio: 16 / 9;
     height: auto;
     object-fit: cover;
     display: block;
@@ -855,16 +826,6 @@ section
 
 .hero-text {
     animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
-/* EFEITO 4: O "Marca-Texto" Dourado crescendo ao passar o mouse */
-.vitrine-subtitle::after {
-    transition: var(--transition-default);
-}
-
-.vitrine-divisor:hover .vitrine-subtitle::after {
-    width: 100px; /* A linha dourada estica quando passa o mouse perto do título */
-    background-color: var(--color-primary); /* Muda pra bordô */
 }
 
 .menu-inferior-mobile {
