@@ -899,3 +899,27 @@ section
   color: #25D366; /* Verde do WhatsApp */
   font-weight: bold;
 }
+
+/* --- Padronização de Cabeçalhos de Seção --- */
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Substitui o mb-5 do Bootstrap por um controle mais fino */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Espaço exato entre o título e o parágrafo */
+}
+
+.titulo-secao-padrao {
+    color: #E02423;
+    font-size: clamp(2rem, 4vw, 2.5rem); /* Mantém a responsividade que você já usa */
+    font-weight: 700;
+    margin: 0;
+}
+
+.subtitulo-secao-padrao {
+    color: #555555;
+    font-size: 1.1rem;
+    max-width: 600px; /* Evita que o texto fique muito longo no desktop */
+    margin: 0;
+}
