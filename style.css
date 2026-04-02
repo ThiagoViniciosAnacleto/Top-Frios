@@ -511,22 +511,15 @@ section
     color: var(--color-dark); 
 }
 
-/* O "Pulo do Gato": a mola que empurra o rodapé para baixo */
 .produto-desc { 
     font-size: 0.9rem; 
     color: #666; 
     margin-bottom: 1.5rem; 
     flex-grow: 1;
-
-    text-align: justify;
-    
-    /* Ativa hífens automáticos para evitar espaços gigantes */
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    
-    /* Ajuda o navegador a decidir onde quebrar a linha */
-    word-break: break-word;
+    text-align: justify; /* Mantém o justificado */
+    hyphens: none;       /* Garante que não haverá hífens */
+    -webkit-hyphens: none;
+    word-break: normal;  /* Evita quebras de palavras no meio */
 }
 
 .produto-footer {
