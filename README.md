@@ -1,6 +1,6 @@
 # Top Frios - Queijos, Tábuas de Frios e Iguarias
 
-![Página Inicial do Site da Top Frios](assets/img/tela-inicial.png)
+![Página Inicial do Site da Top Frios](assets/img/tela-inicial.webp)
 
 Este é o site oficial da **Top Frios**, uma casa especializada em queijos premium, tábuas de frios artesanais e produtos de empório, localizada em São José dos Pinhais - PR.
 
