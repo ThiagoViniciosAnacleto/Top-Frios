@@ -2,9 +2,11 @@
  * Project: Top Frios - Queijos e Cia
  * Author: Thiago Anacleto
  * Year: 2026
- * License: MIT
+ * License: Proprietary / All Rights Reserved
  * Description: Custom JavaScript for Top Frios Landing Page.
+ * Unauthorized copying of this file is strictly prohibited.
  */
+
 document.addEventListener("DOMContentLoaded", function() {
     
     // ==========================================
