@@ -6,7 +6,7 @@ Este é o site oficial da **Top Frios**, uma casa especializada em queijos premi
 
 O projeto foi desenvolvido para oferecer uma experiência de catálogo digital fluida, permitindo que os clientes visualizem as opções de tábuas, caixas de presentes e produtos do empório antes de realizar o pedido via WhatsApp.
 
-🔗 **Link do Projeto:** [https://topfriosqueijosecia.com.br/](https://topfriosqueijosecia.com.br/)
+🔗 **Link do Projeto:** <a href="https://topfriosqueijosecia.com.br/" target="_blank" rel="noopener noreferrer">https://topfriosqueijosecia.com.br/</a>
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -31,7 +31,8 @@ O projeto foi construído utilizando tecnologias modernas de front-end para gara
 
 Este projeto foi idealizado e desenvolvido por:
 
-* **[Thiago Anacleto](https://www.linkedin.com/in/thiagoviniciosanacleto/)** * **GitHub:** [@ThiagoViniciosAnacleto](https://github.com/ThiagoViniciosAnacleto)
+* **LinkedIn:** <a href="https://www.linkedin.com/in/thiagoviniciosanacleto/" target="_blank" rel="noopener noreferrer">Thiago Anacleto</a>
+* **GitHub:** <a href="https://github.com/ThiagoViniciosAnacleto" target="_blank" rel="noopener noreferrer">@ThiagoViniciosAnacleto</a>
 
 ## 📄 Licença e Direitos Autorais
 
@@ -40,6 +41,7 @@ Este software e todos os arquivos associados são de propriedade exclusiva de **
 Fica estritamente proibido:
 1. Copiar, modificar ou distribuir o código-fonte ou partes dele.
 2. Usar este software para fins comerciais ou privados sem a autorização expressa do autor.
+3. Sublicenciar ou vender o código a terceiros.
 
 ---
 © 2026 Thiago Anacleto. Todos os direitos reservados.
