@@ -55,6 +55,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // ==========================================
+    // 2. RASTREAMENTO PASSIVO DE CLIQUES NO WHATSAPP
+    // ==========================================
+    document.addEventListener('click', function (event) {
+        const waLink = event.target.closest('a[href*="wa.me"]');
+        if (!waLink) return;
+
+        try {
+            if (typeof window.gtag === 'function') {
+                const card = waLink.closest('.produto-card');
+                const nomeCard = card ? card.querySelector('.produto-nome') : null;
+                const tituloModal = waLink.id === 'btnWhatsappModal' ? document.getElementById('tituloModal') : null;
+                const contexto = nomeCard
+                    ? nomeCard.textContent.trim()
+                    : (tituloModal ? tituloModal.textContent.trim() + ' (Modal)' : (waLink.textContent.trim() || 'WhatsApp CTA'));
+
+                window.gtag('event', 'generate_lead', {
+                    event_category: 'WhatsApp',
+                    event_label: contexto
+                });
+                // window.gtag('event', 'conversion', { 'send_to': 'AW-18184890390/SEU_ROTULO_AQUI' });
+            }
+        } catch (e) {}
+    });
+
         /* =========================================
     EFEITOS DE SCROLL REVEAL (Aparecer ao rolar)
     ========================================= */
