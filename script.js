@@ -45,12 +45,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Acessibilidade por teclado (Enter / Space) nos cards de zoom
+    document.querySelectorAll('.produto-img-wrapper').forEach(function (wrapper) {
+        wrapper.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                wrapper.click();
+            }
+        });
+    });
+
         /* =========================================
     EFEITOS DE SCROLL REVEAL (Aparecer ao rolar)
     ========================================= */
     
-    // Verifica se a biblioteca foi carregada corretamente no HTML
-    if (typeof ScrollReveal !== 'undefined') {
+    // Verifica se a biblioteca foi carregada e respeita prefers-reduced-motion
+    if (typeof ScrollReveal !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         
         // Configuração padrão premium (Suave, vem de baixo para cima)
         const revealPremium = {
@@ -68,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
             distance: '30px'
         });
 
-        // 2. Anima os Títulos das Seções (Vitrine, Avaliações, Loja)
-        ScrollReveal().reveal('.section-header, .vitrine-divisor, .loja-header', { 
+        // 2. Anima os Títulos das Seções (Vitrine, Caixas, Empório, Loja)
+        ScrollReveal().reveal('.cabecalho-secao, .loja-header', { 
             ...revealPremium, 
             origin: 'bottom',
             delay: 100

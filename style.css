@@ -176,13 +176,6 @@ header nav {
     z-index: -1;
 }
 
-/* Sombra suave e borda na imagem hero */
-.hero-img {
-    border: 8px solid var(--color-white);
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
-}
-
-
 /* Botão CTA Principal */
 .btn-cta {
     background-color: var(--color-light);
@@ -293,35 +286,6 @@ section .section-header h2 {
     background: linear-gradient(135deg, var(--color-white) 0%, var(--color-light) 100%);
 }
 
-.custom-shape-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg); /* Inverte para a curva subir suavemente */
-}
-
-.custom-shape-divider-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 80px; /* Altura da onda */
-}
-
-.custom-shape-divider-bottom .shape-fill {
-    /* Usa a cor de fundo da seção vitrine para a transição ficar invisível */
-    fill: var(--color-secondary); 
-}
-
-/* Ajuste para celular */
-@media (max-width: 767px) {
-    .custom-shape-divider-bottom svg {
-        height: 40px;
-    }
-}
-
 .hero-content {
     display: flex;
     align-items: center;
@@ -341,8 +305,6 @@ section .section-header h2 {
     max-width: 500px;
     margin: 0 auto;
 }
-
-.hero-img { width: 100%; max-width: 35rem; height: auto; object-fit: contain; }
 
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -389,10 +351,6 @@ section .section-header h2 {
         max-width: 300px !important;    /* Foto menor para caber na tela sem scroll */
         margin-top: 0 !important;
         padding-top: 0 !important;
-    }
-    
-    .hero-img {
-        border-width: 8px !important;   /* Moldura mais fina para ganhar espaço */
     }
 }
 
@@ -484,8 +442,14 @@ section .section-header h2 {
     pointer-events: none;
 }
 
-.produto-img-wrapper:hover .zoom-overlay {
+.produto-img-wrapper:hover .zoom-overlay,
+.produto-img-wrapper:focus-visible .zoom-overlay {
     opacity: 1; 
+}
+
+.produto-img-wrapper:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: -3px;
 }
 
 .zoom-overlay i {
@@ -495,7 +459,8 @@ section .section-header h2 {
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.produto-img-wrapper:hover .zoom-overlay i {
+.produto-img-wrapper:hover .zoom-overlay i,
+.produto-img-wrapper:focus-visible .zoom-overlay i {
     transform: scale(1); 
 }
 
@@ -542,8 +507,9 @@ section .section-header h2 {
 }
 
 .btn-whatsapp-small {
-    background-color: var(--color-whatsapp);
+    background-color: #1DA851;
     color: var(--color-white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
     padding: 0.5rem 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -563,66 +529,6 @@ section .section-header h2 {
     gap: clamp(1.5rem, 3vw, 2.5rem);
     width: 100%;
 }
-
-.card-produto {
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
-
-.card-produto:hover {
-    transform: translateY(-4px);
-}
-
-/* Nova formatação para imagens clicáveis e fluidas */
-.card-produto a {
-    display: block;
-    overflow: hidden;
-    cursor: zoom-in; /* Muda o cursor para indicar que dá pra dar zoom */
-}
-
-.img-zoom {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Efeito sutil de zoom no hover para indicar interatividade */
-.card-produto:hover .img-zoom {
-    transform: scale(1); 
-}
-
-.card-conteudo {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.card-conteudo h3 {
-    font-size: clamp(1.2rem, 2vw + 0.5rem, 1.4rem);
-    color: #c8102e;
-    margin-bottom: 0.8rem;
-}
-
-.card-conteudo p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #444;
-    margin-bottom: 0.5rem;
-}
-
-.lista-geleias p {
-    font-size: 0.9rem;
-}
-
 
 /* =========================================
     6. LOJA
@@ -773,8 +679,8 @@ section .section-header h2 {
    MEDIA QUERIES APENAS PARA LAYOUT
    ========================================= */
 @media (min-width: 992px) {
-    /* Destrava o grid da história e loja para o lado a lado no PC */
-    .historia-grid, .loja-grid {
+    /* Destrava o grid da loja para o lado a lado no PC */
+    .loja-grid {
         grid-template-columns: 1fr 1fr;
     }
     .loja-mapa { aspect-ratio: 16 / 9; }
@@ -787,17 +693,6 @@ section .section-header h2 {
 /* =========================================
    9. ANIMAÇÕES E MICROINTERAÇÕES (FRUFRUS)
    ========================================= */
-
-/* EFEITO 1: "Respiração" (Flutuação) na Foto do Hero */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); } /* Sobe 10px suavemente */
-    100% { transform: translateY(0px); }
-}
-
-.hero-img {
-    animation: float 6s ease-in-out infinite;
-}
 
 /* EFEITO 2: Reflexo de Brilho nos Botões (Como um flash de luz passando) */
 @keyframes shine {
@@ -849,7 +744,7 @@ section .section-header h2 {
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-around;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
     z-index: 1050; /* Fica por cima de tudo */
 }
 
@@ -868,7 +763,7 @@ section .section-header h2 {
 }
 
 .item-menu-mobile.destaque-whatsapp {
-    color: #25D366; /* Verde do WhatsApp */
+    color: #128C7E; /* Verde oficial escuro do WhatsApp para contraste WCAG AA */
     font-weight: bold;
 }
 
@@ -883,7 +778,7 @@ section .section-header h2 {
 }
 
 .titulo-secao-padrao {
-    color: #E02423;
+    color: var(--color-primary);
     font-size: clamp(2rem, 4vw, 2.5rem); /* Mantém a responsividade que você já usa */
     font-weight: 700;
     margin: 0;
@@ -894,4 +789,29 @@ section .section-header h2 {
     font-size: 1.1rem;
     max-width: 600px; /* Evita que o texto fique muito longo no desktop */
     margin: 0;
+}
+
+/* Controles do Carrossel Hero: invisíveis ao mouse, visíveis no foco por teclado */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    opacity: 0;
+}
+
+#heroCarousel .carousel-control-prev:focus-visible,
+#heroCarousel .carousel-control-next:focus-visible {
+    opacity: 1;
+    outline: 3px solid var(--color-primary);
+    outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-text,
+    .btn-cta::after,
+    .btn-whatsapp-small::after {
+        animation: none !important;
+    }
 }

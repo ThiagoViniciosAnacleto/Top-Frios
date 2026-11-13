@@ -12,7 +12,7 @@
         </script>
 
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         
         <title>Top Frios | Queijos, Tábuas de Frios e Iguarias em São José dos Pinhais</title>
         <meta name="description" content="Tábua de frios, box de frios, queijo canastra e queijos artesanais em São José dos Pinhais. Visite-nos na Rua Almirante Alexandrino, Afonso Pena, ou peça já!">
@@ -199,6 +199,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <a href="#conteudo-principal" class="visually-hidden-focusable">Pular para o conteúdo principal</a>
         <header>
             <nav class="navbar navbar-expand-lg py-3 shadow-sm navbar-clean">
                 <div class="container">
@@ -210,7 +211,7 @@
                     </a>
 
                     <button class="navbar-toggler border-0 shadow-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegação">
-                        <i class="fa-solid fa-bars fs-1"></i>
+                        <i class="fa-solid fa-bars fs-1" aria-hidden="true"></i>
                     </button>
 
                     <div class="collapse navbar-collapse" id="menuPrincipal">
@@ -221,7 +222,7 @@
                             <li class="nav-item"><a class="nav-link fw-semibold" href="#loja">A Loja</a></li>
                             <li class="nav-item mt-3 mt-lg-0">
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20fazer%20um%20Pedido." class="btn btn-cta rounded-pill px-4 py-2 shadow fw-bold d-flex align-items-center gap-2" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp fs-5"></i> Pedir Agora
+                                    <i class="fa-brands fa-whatsapp fs-5" aria-hidden="true"></i> Pedir Agora
                                 </a>
                             </li>
                         </ul>
@@ -230,7 +231,7 @@
             </nav>
         </header>
 
-        <main>
+        <main id="conteudo-principal">
             <section id="inicio" class="hero-section">
                 <div class="container hero-content">
     
@@ -347,11 +348,11 @@
                                 </div>
                             </div>
                             
-                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" style="opacity: 0;">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Anterior</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" style="opacity: 0;">
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Próximo</span>
                             </button>
@@ -363,7 +364,7 @@
                 <div class="elegant-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
-                        <i class="fa-solid fa-xs fa-diamond"></i>
+                        <i class="fa-solid fa-xs fa-diamond" aria-hidden="true"></i>
                     </div>
                     <div class="divider-line"></div>
                 </div>
@@ -377,19 +378,19 @@
                 <div class="produtos-masonry">
             
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/marselha.avif" data-titulo="Tábua Marselha">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/marselha.avif" data-titulo="Tábua Marselha" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Marselha">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/marselha.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/marselha.webp" alt="Tábua de Frios Marselha 600g com queijos nobres e embutidos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 600g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 2</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 600g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 2</span>
                             </div>
 
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -399,24 +400,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 95,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Marselha." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/veneza.avif" data-titulo="Tábua Veneza">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/veneza.avif" data-titulo="Tábua Veneza" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Veneza">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/veneza.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/veneza.webp" alt="Tábua de Frios Veneza 500g com queijos artesanais e frutas - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 500g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 2</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 500g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 2</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -425,24 +426,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 95,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Veneza." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/florença.avif" data-titulo="Tábua Florença">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/florença.avif" data-titulo="Tábua Florença" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Florença">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/florença.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/florença.webp" alt="Tábua de Frios Florença 700g com queijos especiais e embutidos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 700g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 3</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 700g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 3</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -451,24 +452,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 105,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Floren%C3%A7a." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/lille.avif" data-titulo="Tábua Lille">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/lille.avif" data-titulo="Tábua Lille" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Lille">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/lille.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/lille.webp" alt="Tábua de Frios Lille 800g com seleção de queijos e frios - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 800g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 4</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 800g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 4</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -477,24 +478,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 130,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Lille." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/grenoble.avif" data-titulo="Tábua Grenoble">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/grenoble.avif" data-titulo="Tábua Grenoble" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Grenoble">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/grenoble.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/grenoble.webp" alt="Tábua de Frios Grenoble 1.000g com queijos nobres e embutidos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 1.000g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 5</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 1.000g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 5</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -503,24 +504,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 155,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Grenoble." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/frança.avif" data-titulo="Tábua França">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/frança.avif" data-titulo="Tábua França" role="button" tabindex="0" aria-label="Ampliar foto: Tábua França">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/frança.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/frança.webp" alt="Tábua de Frios França 1.200g com queijos especiais, grissini e azeitonas - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 1.200g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 6</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 1.200g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 6</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -529,24 +530,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 195,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Fran%C3%A7a." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/paris.avif" data-titulo="Tábua Paris">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/paris.avif" data-titulo="Tábua Paris" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Paris">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/paris.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/paris.webp" alt="Tábua de Frios Paris 1.400g com presunto de Parma, queijos e geleia - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 1.400g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 7</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 1.400g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 7</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -555,24 +556,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 220,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Paris." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/russia.avif" data-titulo="Tábua Rússia">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/russia.avif" data-titulo="Tábua Rússia" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Rússia">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/russia.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/russia.webp" alt="Tábua de Frios Rússia 2.110g para eventos com queijos e embutidos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 2.110g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 12</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 2.110g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 12</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -581,24 +582,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 295,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20R%C3%BAssia." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/tabua-metro.avif" data-titulo="Tábua Metro">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/tabua-metro.avif" data-titulo="Tábua Metro" role="button" tabindex="0" aria-label="Ampliar foto: Tábua Metro">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/tabua-metro.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/tabua-metro.webp" alt="Tábua de Frios Metro artesanal para grandes eventos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-ruler-horizontal"></i> 3.000g</span>
-                                <span class="badge-item"><i class="fa-solid fa-champagne-glasses"></i> Serve 12</span>
+                                <span class="badge-item"><i class="fa-solid fa-ruler-horizontal" aria-hidden="true"></i> 3.000g</span>
+                                <span class="badge-item"><i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i> Serve 12</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -607,7 +608,7 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 495,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20a%20T%C3%A1bua%20Metro." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
@@ -619,7 +620,7 @@
                 <div class="elegant-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
-                        <i class="fa-solid fa-xs fa-diamond"></i>
+                        <i class="fa-solid fa-xs fa-diamond" aria-hidden="true"></i>
                     </div>
                     <div class="divider-line"></div>
                 </div>
@@ -635,17 +636,17 @@
 
                     <div class="produtos-masonry">
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/zurique.avif" data-titulo="Box Zurique">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/zurique.avif" data-titulo="Box Zurique" role="button" tabindex="0" aria-label="Ampliar foto: Box Zurique">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/zurique.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/zurique.webp" alt="Box de Frios Zurique 350g com queijos artesanais e salame - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 350g</span>
-                                <span class="badge-item"><i class="fa-solid fa-user"></i> Serve 1</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 350g</span>
+                                <span class="badge-item"><i class="fa-solid fa-user" aria-hidden="true"></i> Serve 1</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -654,24 +655,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 55,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20o%20Box%20Zurique." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/friburgo.avif" data-titulo="Box Friburgo">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/friburgo.avif" data-titulo="Box Friburgo" role="button" tabindex="0" aria-label="Ampliar foto: Box Friburgo">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/friburgo.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/friburgo.webp" alt="Box de Frios Friburgo 700g com presunto de Parma e queijos nobres - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 700g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 2</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 700g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 2</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -680,24 +681,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 140,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20o%20Box%20Friburgo." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/roma.avif" data-titulo="Box Roma">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/roma.avif" data-titulo="Box Roma" role="button" tabindex="0" aria-label="Ampliar foto: Box Roma">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/roma.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/roma.webp" alt="Box de Frios Roma 750g com queijos especiais, frutas e nozes - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 750g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 3</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 750g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 3</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -706,24 +707,24 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 145,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20o%20Box%20Roma." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
                     </article>
 
                     <article class="produto-card">
-                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/amsterda.avif" data-titulo="Box Amsterdã">
+                        <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/amsterda.avif" data-titulo="Box Amsterdã" role="button" tabindex="0" aria-label="Ampliar foto: Box Amsterdã">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/amsterda.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/amsterda.webp" alt="Box de Frios Amsterdã 1.400g com queijos, embutidos e bebida - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="produto-badges">
-                                <span class="badge-item"><i class="fa-solid fa-weight-hanging"></i> 1.400g</span>
-                                <span class="badge-item"><i class="fa-solid fa-users"></i> Serve 5</span>
+                                <span class="badge-item"><i class="fa-solid fa-weight-hanging" aria-hidden="true"></i> 1.400g</span>
+                                <span class="badge-item"><i class="fa-solid fa-users" aria-hidden="true"></i> Serve 5</span>
                             </div>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="produto-info">
@@ -732,7 +733,7 @@
                             <div class="produto-footer">
                                 <span class="produto-preco">R$ 249,00</span>
                                 <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20pedir%20o%20Box%20Amsterd%C3%A3." class="btn-whatsapp-small" target="_blank" rel="noopener noreferrer">
-                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir
                                 </a>
                             </div>
                         </div>
@@ -744,7 +745,7 @@
                 <div class="elegant-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
-                        <i class="fa-solid fa-xs fa-diamond"></i>
+                        <i class="fa-solid fa-xs fa-diamond" aria-hidden="true"></i>
                     </div>
                     <div class="divider-line"></div>
                 </div>
@@ -759,13 +760,13 @@
                         <div class="grid-produtos">
                         
                         <article class="produto-card">
-                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/queijos.avif" data-titulo="Queijos Especiais">
+                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/queijos.avif" data-titulo="Queijos Especiais" role="button" tabindex="0" aria-label="Ampliar foto: Queijos Especiais">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/queijos.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/queijos.webp" alt="Queijo Canastra e queijos especiais artesanais - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                             </div>
                             <div class="produto-info">
@@ -775,13 +776,13 @@
                         </article>
 
                         <article class="produto-card">
-                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/embutidos.avif" data-titulo="Embutidos">
+                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/embutidos.avif" data-titulo="Embutidos" role="button" tabindex="0" aria-label="Ampliar foto: Embutidos">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/embutidos.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/embutidos.webp" alt="Embutidos artesanais, salames e presunto de Parma - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                             </div>
                             <div class="produto-info">
@@ -791,13 +792,13 @@
                         </article>
 
                         <article class="produto-card">
-                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/antepastos.avif" data-titulo="Antepastos">
+                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/antepastos.avif" data-titulo="Antepastos" role="button" tabindex="0" aria-label="Ampliar foto: Antepastos">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/antepastos.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/antepastos.webp" alt="Antepastos, patês artesanais e caponata - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                             </div>
                             <div class="produto-info">
@@ -808,13 +809,13 @@
                         </article>
 
                         <article class="produto-card">
-                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/baguetes.avif" data-titulo="Baguetes Recheadas">
+                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/baguetes.avif" data-titulo="Baguetes Recheadas" role="button" tabindex="0" aria-label="Ampliar foto: Baguetes Recheadas">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/baguetes.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/baguetes.webp" alt="Baguetes recheadas com frios e queijos selecionados - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                             </div>
                             <div class="produto-info">
@@ -828,13 +829,13 @@
                         </article>
 
                         <article class="produto-card">
-                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/geleias.avif" data-titulo="Geleias">
+                            <div class="produto-img-wrapper" data-bs-toggle="modal" data-bs-target="#modalZoom" data-imagem="assets/img/fotos-produtos/geleias.avif" data-titulo="Geleias" role="button" tabindex="0" aria-label="Ampliar foto: Geleias">
                             <picture>
                                 <source srcset="assets/img/fotos-produtos/geleias.avif" type="image/avif">
                                 <img src="assets/img/fotos-produtos/geleias.webp" alt="Geleias artesanais tradicionais e de pimenta para queijos - Top Frios São José dos Pinhais" class="produto-img" loading="lazy">
                             </picture>
                             <div class="zoom-overlay">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i>
                             </div>
                             </div>
                             <div class="produto-info">
@@ -853,7 +854,7 @@
                 <div class="elegant-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
-                        <i class="fa-solid fa-xs fa-diamond"></i>
+                        <i class="fa-solid fa-xs fa-diamond" aria-hidden="true"></i>
                     </div>
                     <div class="divider-line"></div>
                 </div>
@@ -862,7 +863,7 @@
                 <div class="container">
                     
                     <div class="text-center mb-5">
-                        <h2 class="section-title" style="color: var(--color-primary); font-weight: 700;">O que dizem nossos clientes</h2>
+                        <h2 class="section-title titulo-secao-padrao">O que dizem nossos clientes</h2>
                         <p class="text-muted fs-5 mt-2">Avaliações reais de quem já vivenciou a experiência Top Frios.</p>
                     </div>
 
@@ -875,13 +876,14 @@
                                         <img src="https://ui-avatars.com/api/?name=Maria+Silva&background=7A1A2A&color=fff" alt="Foto Maria" class="rounded-circle" width="50" height="50">
                                         <div>
                                             <h3 class="mb-0 fs-6 fw-bold">Maria Silva</h3>
-                                            <small class="text-muted"><i class="fa-solid fa-certificate text-primary-custom me-1"></i>Guia Local</small>
+                                            <small class="text-muted"><i class="fa-solid fa-certificate text-primary-custom me-1" aria-hidden="true"></i>Guia Local</small>
                                         </div>
                                     </div>
-                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;"></i>
+                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;" aria-hidden="true"></i>
                                 </div>
                                 <div class="mb-2" style="color: #FBBC05;">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="visually-hidden">Avaliação: 5 de 5 estrelas</span>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
                                     <span class="text-muted ms-1 fs-6">há 2 semanas</span>
                                 </div>
                                 <p class="text-muted fst-italic mb-0">"Melhor tábua de frios de São José dos Pinhais! O capricho na montagem é impressionante e os queijos são de altíssima qualidade. Pedi a Tábua Veneza e foi um sucesso."</p>
@@ -895,13 +897,14 @@
                                         <img src="https://ui-avatars.com/api/?name=Carlos+Eduardo&background=D4AF37&color=fff" alt="Foto Carlos" class="rounded-circle" width="50" height="50">
                                         <div>
                                             <h3 class="mb-0 fs-6 fw-bold">Carlos Eduardo</h3>
-                                            <small class="text-muted"><i class="fa-solid fa-certificate text-primary-custom me-1"></i>Guia Local</small>
+                                            <small class="text-muted"><i class="fa-solid fa-certificate text-primary-custom me-1" aria-hidden="true"></i>Guia Local</small>
                                         </div>
                                     </div>
-                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;"></i>
+                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;" aria-hidden="true"></i>
                                 </div>
                                 <div class="mb-2" style="color: #FBBC05;">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="visually-hidden">Avaliação: 5 de 5 estrelas</span>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
                                     <span class="text-muted ms-1 fs-6">há 1 mês</span>
                                 </div>
                                 <p class="text-muted fst-italic mb-0">"Atendimento impecável via WhatsApp e entrega no horário combinado. O Box Amsterdã é perfeito para presentear, muito sofisticado!"</p>
@@ -918,10 +921,11 @@
                                             <small class="text-muted">Cliente Verificada</small>
                                         </div>
                                     </div>
-                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;"></i>
+                                    <i class="fa-brands fa-google fs-4" style="color: #4285F4;" aria-hidden="true"></i>
                                 </div>
                                 <div class="mb-2" style="color: #FBBC05;">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="visually-hidden">Avaliação: 5 de 5 estrelas</span>
+                                    <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
                                     <span class="text-muted ms-1 fs-6">há 2 meses</span>
                                 </div>
                                 <p class="text-muted fst-italic mb-0">"Sou cliente fiel! As baguetes são crocantes e os patês artesanais não têm igual na região. Recomendo muito."</p>
@@ -932,7 +936,7 @@
 
                     <div class="text-center mt-5">
                         <a href="https://www.google.com/maps/place/Top+Frios+Queijos+%26+Cia/@-25.510959,-49.1872438,17z/data=!4m8!3m7!1s0x94dcf194539e7883:0x6749f0ec8a01cea1!8m2!3d-25.510959!4d-49.1872438!9m1!1b1!16s%2Fg%2F11mvq960v9?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold transition-default">
-                            <i class="fa-brands fa-google me-2" style="color: #4285F4;"></i> Ver mais avaliações no Google
+                            <i class="fa-brands fa-google me-2" style="color: #4285F4;" aria-hidden="true"></i> Ver mais avaliações no Google
                         </a>
                     </div>
 
@@ -942,7 +946,7 @@
                 <div class="elegant-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
-                        <i class="fa-solid fa-xs fa-diamond"></i>
+                        <i class="fa-solid fa-xs fa-diamond" aria-hidden="true"></i>
                     </div>
                     <div class="divider-line"></div>
                 </div>
@@ -951,7 +955,7 @@
                 <div class="container">
                     
                     <div class="loja-header text-center mb-4">
-                        <h2 class="mb-2" style="color: var(--color-primary); font-weight: 700;">Venha nos Visitar</h2>
+                        <h2 class="mb-2 titulo-secao-padrao">Venha nos Visitar</h2>
                         <p class="text-muted fs-5 mb-0">Será um prazer receber você em nossa loja física para degustar e escolher seus produtos de perto.</p>
                     </div>
 
@@ -971,7 +975,7 @@
                             <div class="mb-4 d-flex flex-column gap-3">
                                 <div class="info-bloco d-flex align-items-center gap-3 mb-0">
                                     <div class="bg-white p-3 rounded-circle shadow-sm text-primary-custom d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
-                                        <i class="fa-solid fa-location-dot fs-5"></i>
+                                        <i class="fa-solid fa-location-dot fs-5" aria-hidden="true"></i>
                                     </div>
                                     <div>
                                         <h3 class="mb-1 fs-6 fw-bold">Endereço</h3>
@@ -981,7 +985,7 @@
 
                                 <div class="info-bloco d-flex align-items-center gap-3 mb-0">
                                     <div class="bg-white p-3 rounded-circle shadow-sm text-primary-custom d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
-                                        <i class="fa-solid fa-clock fs-5"></i>
+                                        <i class="fa-solid fa-clock fs-5" aria-hidden="true"></i>
                                     </div>
                                     <div>
                                         <h3 class="mb-1 fs-6 fw-bold">Horário de Atendimento</h3>
@@ -1027,9 +1031,9 @@
                     <div class="col-lg-3 col-md-6">
                         <h3 class="footer-title">Contato</h3>
                         <ul class="footer-info list-unstyled">
-                            <li><i class="fa-solid fa-location-dot me-2"></i> R. Alm. Alexandrino, 2084 - Afonso Pena, SJP</li>
-                            <li><i class="fa-solid fa-phone me-2"></i> <a href="tel:+5541995219758" class="text-reset text-decoration-none">(41) 99521-9758</a></li>
-                            <li><i class="fa-solid fa-envelope me-2"></i> <a href="mailto:contato@topfrios.com.br" class="text-reset text-decoration-none">contato@topfrios.com.br</a></li>
+                            <li><i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i> R. Alm. Alexandrino, 2084 - Afonso Pena, SJP</li>
+                            <li><i class="fa-solid fa-phone me-2" aria-hidden="true"></i> <a href="tel:+5541995219758" class="text-reset text-decoration-none">(41) 99521-9758</a></li>
+                            <li><i class="fa-solid fa-envelope me-2" aria-hidden="true"></i> <a href="mailto:contato@topfrios.com.br" class="text-reset text-decoration-none">contato@topfrios.com.br</a></li>
                         </ul>
                     </div>
 
@@ -1037,8 +1041,8 @@
                         <h3 class="footer-title">Siga-nos</h3>
                         <p>Acompanhe nossas novidades diárias.</p>
                         <div class="footer-social d-flex gap-3">
-                            <a href="https://www.instagram.com/topfrios.queijosecia/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/topfriosqueijoseciasjp/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/topfrios.queijosecia/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/topfriosqueijoseciasjp/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1049,11 +1053,11 @@
                         <br class="d-md-none"> 
                         Desenvolvido por <strong>Thiago Anacleto</strong>
                         <span class="d-block d-md-inline ms-md-2">
-                            <a href="https://www.linkedin.com/in/thiagoviniciosanacleto/" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none mx-1" title="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/thiagoviniciosanacleto/" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none mx-1" title="LinkedIn" aria-label="LinkedIn de Thiago Anacleto">
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="https://github.com/ThiagoViniciosAnacleto" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none mx-1" title="GitHub">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/ThiagoViniciosAnacleto" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none mx-1" title="GitHub" aria-label="GitHub de Thiago Anacleto">
+                                <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </span>
                     </p>
@@ -1061,29 +1065,29 @@
             </div>
         </footer>
 
-        <nav class="menu-inferior-mobile d-md-none"> <a href="#inicio" class="item-menu-mobile">
-            <i class="fa-solid fa-house"></i>
+        <nav class="menu-inferior-mobile d-md-none" aria-label="Navegação rápida mobile"> <a href="#inicio" class="item-menu-mobile">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
             <span>Início</span>
         </a>
         <a href="#vitrine" class="item-menu-mobile">
-            <i class="fa-solid fa-cheese"></i>
+            <i class="fa-solid fa-cheese" aria-hidden="true"></i>
             <span>Tábuas</span>
         </a>
         <a href="#caixas" class="item-menu-mobile">
-            <i class="fa-solid fa-box"></i>
+            <i class="fa-solid fa-box" aria-hidden="true"></i>
             <span>Caixas</span>
         </a>
         <a href="#produtos" class="item-menu-mobile">
-            <i class="fa-solid fa-wine-bottle"></i>
+            <i class="fa-solid fa-wine-bottle" aria-hidden="true"></i>
             <span>Empório</span>
         </a>
         <a href="https://wa.me/5541995219758?text=Ol%C3%A1!%20Quero%20fazer%20um%20Pedido." target="_blank" rel="noopener noreferrer" class="item-menu-mobile destaque-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
             <span>Pedir</span>
         </a>
         </nav>
 
-        <div class="modal fade" id="modalZoom" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="modalZoom" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content bg-transparent border-0">
                     <div class="modal-header border-0 pb-0">
@@ -1096,7 +1100,7 @@
                         </picture>
                         <h3 id="tituloModal" class="h4 text-white mt-3 fw-bold drop-shadow">Produto Top Frios</h3>
                         <a href="#" id="btnWhatsappModal" class="btn-whatsapp-small d-inline-flex align-items-center gap-2 mt-2 px-4 py-2" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-whatsapp"></i> Pedir pelo WhatsApp
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Pedir pelo WhatsApp
                         </a>
                     </div>
                 </div>
