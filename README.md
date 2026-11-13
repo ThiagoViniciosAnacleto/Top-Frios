@@ -2,30 +2,33 @@
 
 ![Página Inicial do Site da Top Frios](assets/img/tela-inicial.webp)
 
-Este é o site oficial da **Top Frios**, uma casa especializada em queijos premium, tábuas de frios artesanais e produtos de empório, localizada em São José dos Pinhais - PR.
+Este é o site oficial da **Top Frios - Queijos e Cia**, uma casa especializada em queijos premium, tábuas de frios artesanais e produtos de empório, localizada no bairro Afonso Pena, em São José dos Pinhais - PR.
 
 O projeto foi desenvolvido para oferecer uma experiência de catálogo digital fluida, permitindo que os clientes visualizem as opções de tábuas, caixas de presentes e produtos do empório antes de realizar o pedido via WhatsApp.
 
-🔗 **Link do Projeto:** [topfriosqueijosecia.com.br](https://topfriosqueijosecia.com.br/)
+🔗 **Link do Projeto:** [www.topfriosqueijosecia.com.br](https://www.topfriosqueijosecia.com.br/)
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi construído utilizando tecnologias modernas de front-end para garantir performance e responsividade:
+O projeto foi construído utilizando tecnologias modernas de front-end para garantir performance, acessibilidade e SEO local:
 
-* **HTML5** - Estrutura semântica.
-* **CSS3 / Bootstrap 5** - Estilização e layout responsivo (Mobile First).
-* **JavaScript** - Interatividade e funcionalidades dinâmicas.
-* **Google Fonts** - Tipografia personalizada para uma identidade visual sofisticada.
-* **Font Awesome** - Iconografia.
+* **HTML5** - Estrutura semântica e acessível (WCAG).
+* **CSS3 / Bootstrap 5.3** - Estilização, layout responsivo (Mobile First) e suporte a `prefers-reduced-motion`.
+* **JavaScript (Vanilla)** - Modal de zoom, acessibilidade por teclado e rastreamento de leads via `gtag.js`.
+* **ScrollReveal.js** - Animações suaves de entrada ao rolar a página.
+* **Schema.org (JSON-LD)** - Dados estruturados (`SpecialtyFoodStore`) com catálogo de produtos e geolocalização, além de `sitemap.xml` e `robots.txt`.
+* **AVIF / WebP** - Imagens otimizadas com `<picture>` e fallback automático.
+* **Google Fonts & Font Awesome** - Tipografia personalizada (`Playfair Display` e `Poppins`) e iconografia.
 
 ## ✨ Funcionalidades
 
-- **Catálogo Interativo:** Exibição detalhada de tábuas de frios e boxes com preços e composições.
-- **Menu de Empório:** Seção dedicada a queijos especiais, embutidos, antepastos e vinhos.
-- **Depoimentos de Clientes:** Seção de avaliações integrando prova social.
-- **Responsividade Total:** Site totalmente otimizado para dispositivos móveis, tablets e desktops.
-- **Botão de Pedido Direto:** Integração com WhatsApp para facilitar a conversão de vendas.
-- **Mapa de Localização:** Informações claras sobre a loja física e horários de atendimento.
+- **Catálogo Interativo:** Exibição detalhada de tábuas de frios e boxes com preços, pesos e composições.
+- **Modal de Zoom com Pedido Direto:** Visualização ampliada das fotos com botão integrado para pedir o item direto no WhatsApp.
+- **Menu de Empório:** Seção dedicada a queijos especiais (incluindo Queijo Canastra), embutidos, antepastos, baguetes recheadas e geleias.
+- **Menu Rápido Mobile:** Barra de navegação fixa inferior otimizada para dispositivos móveis.
+- **Depoimentos de Clientes:** Relatos de clientes com link direto para as avaliações no Google Maps.
+- **Botão de Pedido Direto:** Integração com WhatsApp (`+55`) e rastreamento passivo de conversão (`gtag.js`).
+- **Mapa de Localização:** Endereço completo, horários de atendimento e mapa interativo da loja física.
 
 ## ✒️ Desenvolvedor
 
