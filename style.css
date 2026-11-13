@@ -677,6 +677,12 @@ section .section-header h2 {
     border-top: 1px solid rgba(212, 175, 55, 0.2); /* Linha dourada fina */
 }
 
+@media (max-width: 991px) {
+    .footer-custom {
+        padding-bottom: 6rem;
+    }
+}
+
 /* Ajuste de tamanho da logo no rodapé */
 .footer-logo {
     height: 8rem; /* Altura controlada para não dominar a seção */
