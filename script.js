@@ -10,42 +10,38 @@
 document.addEventListener("DOMContentLoaded", function() {
     
     // ==========================================
-    // 1. CONTROLE DA NAVBAR NO SCROLL
-    // ==========================================
-    const navbar = document.querySelector(".navbar"); 
-    const scrollThreshold = 60; 
-    let isSticky = false; // Cria uma variável de controle
-
-    if (navbar) {
-        window.addEventListener("scroll", function() {
-            if (window.scrollY > scrollThreshold && !isSticky) {
-                // Só executa se passou do limite E ainda não está fixo
-                navbar.classList.add("navbar-fixed-custom");
-                document.body.style.paddingTop = navbar.offsetHeight + 'px';
-                isSticky = true;
-            } else if (window.scrollY <= scrollThreshold && isSticky) {
-                // Só executa se voltou ao topo E está fixo
-                navbar.classList.remove("navbar-fixed-custom");
-                document.body.style.paddingTop = '0';
-                isSticky = false;
-            }
-        });
-    }
-
-    // ==========================================
-    // 2. MODAL DE ZOOM DOS PRODUTOS (LIGHTBOX)
+    // 1. MODAL DE ZOOM DOS PRODUTOS (LIGHTBOX)
     // ==========================================
     const modalZoom = document.getElementById('modalZoom');
     
     if (modalZoom) {
         modalZoom.addEventListener('show.bs.modal', function (event) {
             const wrapperClicado = event.relatedTarget;
-            
-            const srcImagem = wrapperClicado.getAttribute('data-imagem');
-            const titulo = wrapperClicado.getAttribute('data-titulo');
-            
-            document.getElementById('imagemModalSrc').src = srcImagem;
-            document.getElementById('tituloModal').textContent = titulo;
+            if (!wrapperClicado) return;
+
+            const srcImagem = wrapperClicado.getAttribute('data-imagem') || '';
+            const titulo = wrapperClicado.getAttribute('data-titulo') || '';
+            const imgCard = wrapperClicado.querySelector('img');
+
+            const sourceAvif = document.getElementById('sourceModalAvif');
+            const imgModal = document.getElementById('imagemModalSrc');
+            const tituloModal = document.getElementById('tituloModal');
+            const btnWhatsappModal = document.getElementById('btnWhatsappModal');
+
+            if (sourceAvif) sourceAvif.srcset = srcImagem;
+            if (imgModal) {
+                imgModal.src = srcImagem.replace(/\.avif$/i, '.webp');
+                imgModal.alt = (imgCard && imgCard.alt) ? imgCard.alt : titulo;
+            }
+            if (tituloModal) tituloModal.textContent = titulo;
+
+            if (btnWhatsappModal) {
+                const card = wrapperClicado.closest('.produto-card');
+                const linkCard = card ? card.querySelector('a[href*="wa.me"]') : null;
+                btnWhatsappModal.href = linkCard
+                    ? linkCard.href
+                    : 'https://wa.me/5541995219758?text=' + encodeURIComponent('Olá! Vi ' + titulo + ' no site e gostaria de fazer um pedido.');
+            }
         });
     }
 
