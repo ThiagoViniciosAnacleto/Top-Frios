@@ -358,7 +358,7 @@ section .section-header h2 {
 .produtos-masonry {
     display: grid;
     /* Grid fluido sem precisar de media queries. Cria colunas conforme o espaço! */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); 
     gap: 2rem;
     align-items: stretch; /* Garante que todos os cards na mesma linha tenham a mesma altura */
 }
@@ -525,7 +525,7 @@ section .section-header h2 {
 
 .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: clamp(1.5rem, 3vw, 2.5rem);
     width: 100%;
 }
@@ -636,6 +636,8 @@ section .section-header h2 {
 }
 
 .footer-links a {
+    display: inline-block;
+    padding: 0.2rem 0;
     text-decoration: none;
     color: var(--color-dark);
     transition: var(--transition-default);
@@ -835,6 +837,48 @@ section .section-header h2 {
 #modalZoom .btn-close:focus-visible {
     background-color: #b81b1a;
     transform: scale(1.08);
+}
+
+@media (max-width: 767px) {
+    #imagemModalSrc {
+        max-height: 68vh !important;
+    }
+}
+
+/* --- Seção Dúvidas Frequentes (FAQ) --- */
+.faq-accordion .accordion-item {
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 0.75rem !important;
+    margin-bottom: 0.85rem;
+    overflow: hidden;
+    background-color: var(--color-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.faq-accordion .accordion-button {
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    box-shadow: none;
+    padding: 1.1rem 1.25rem;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    box-shadow: inset 0 -1px 0 rgba(212, 175, 55, 0.25);
+}
+
+.faq-accordion .accordion-button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(224, 36, 35, 0.25);
+}
+
+.faq-accordion .accordion-body {
+    color: #555555;
+    background-color: var(--color-white);
+    line-height: 1.65;
+    font-size: 0.95rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
